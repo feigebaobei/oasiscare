@@ -159,6 +159,7 @@ export default {
       display: flex
       flex-grow: 1
       flex-shrink: 1
+      align-items: center
 
       .titleBox
         font-size: .36rem
@@ -177,19 +178,19 @@ export default {
 
         h2
           font-size: .36rem
-          line-height: .36rem
+          line-height: .42rem
           margin: 0
           // position: absolute
           // bottom: 0
           // left: .06rem
           color: $black
-          margin: -.32rem 0 0 .06rem
+          margin: -.42rem 0 0 .06rem
 
       .subTitleBox
         font-size: .24rem
         line-height: .24rem
         font-weight: $fontWeightBold
-        align-self: flex-end
+        // align-self: flex-end
         margin: 0 $separate24 0 0
         color: $grey0
         flex-grow: 1

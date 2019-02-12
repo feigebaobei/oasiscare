@@ -3,14 +3,13 @@
     titleArea
     <h2>大标题</h2>
     <title-area :title="big.title" :subTitle="big.subTitle" :moreText="big.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
-    <title-area :title="big.title" :subTitle="big.subTitle":eventTypeMore="'s'" @s="ss"></title-area>
+    <title-area :title="big.title" :subTitle="big.subTitle" :eventTypeMore="'s'" @s="ss"></title-area>
     <h2>小标题</h2>
     <title-area :title="small.title" :subTitle="small.subTitle" :hasMore="false" :eventTypeMore="'s'" @s="ss"></title-area>
     <h2>极限标题</h2>
     <title-area :title="extremity.title" :subTitle="extremity.subTitle" :moreText="extremity.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
     <h2>58标题</h2>
     <five-eight :title="five.title" :subTitle="five.subTitle" :moreText="five.moreText"></five-eight>
-    <!-- <five-eight :title="five.title" :subTitle="five.subTitle" :moreText="five.moreText" :eventTypeMore="'s'" @s="ss"></five-eight> -->
   </div>
 </template>
 
