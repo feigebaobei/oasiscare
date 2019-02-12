@@ -152,7 +152,7 @@ export default {
     display: flex
     align-items: center
     justify-content: space-between
-    padding: $paddingTop $paddingRight 0 $paddingLeft
+    padding: .36rem .32rem
     background-color: $white
 
     .leftBox
@@ -161,7 +161,7 @@ export default {
       flex-shrink: 1
 
       .titleBox
-        font-size: .32rem
+        font-size: .36rem
         line-height: 0rem
         // position: relative
         // min-width: 1.8rem
@@ -176,8 +176,8 @@ export default {
           height: .42rem
 
         h2
-          font-size: .32rem
-          line-height: .32rem
+          font-size: .36rem
+          line-height: .36rem
           margin: 0
           // position: absolute
           // bottom: 0
@@ -186,11 +186,12 @@ export default {
           margin: -.32rem 0 0 .06rem
 
       .subTitleBox
-        font-size: .22rem
-        line-height: .22rem
+        font-size: .24rem
+        line-height: .24rem
+        font-weight: $fontWeightBold
         align-self: flex-end
         margin: 0 $separate24 0 0
-        color: $grey1
+        color: $grey0
         flex-grow: 1
         flex-shrink: 1
 
