@@ -191,7 +191,7 @@ export default {
         line-height: .22rem
         // align-self: flex-end
         margin: 0 $separate24 0 0
-        color: $grey1
+        color: $grey6
         flex-grow: 1
         flex-shrink: 1
 

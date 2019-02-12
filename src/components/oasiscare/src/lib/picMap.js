@@ -16,6 +16,16 @@ const icon = {
     x1: require('../assets/imgs/arrows1x.png'),
     x2: require('../assets/imgs/arrows2x.png'),
     x3: require('../assets/imgs/arrows3x.png')
+  },
+  address: {
+    x1: require('../assets/imgs/address1x.png'),
+    x2: require('../assets/imgs/address2x.png'),
+    x3: require('../assets/imgs/address3x.png')
+  },
+  phone: {
+    x1: '',
+    x2: require('../assets/imgs/phone2x.png'),
+    x3: require('../assets/imgs/phone3x.png')
   }
 }
 const pic = {

@@ -192,7 +192,7 @@ export default {
         font-weight: $fontWeightBold
         // align-self: flex-end
         margin: 0 $separate24 0 0
-        color: $grey0
+        color: $grey9
         flex-grow: 1
         flex-shrink: 1
 

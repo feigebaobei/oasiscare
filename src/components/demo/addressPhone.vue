@@ -1,7 +1,8 @@
 <template>
   <div class="addressPhone">
     <h2>address phone</h2>
-    <address-phone></address-phone>
+    <address-phone :addressText="a0"></address-phone>
+    <address-phone :addressText="a1"></address-phone>
   </div>
 </template>
 
@@ -11,26 +12,8 @@ export default {
   props: {},
   data () {
     return {
-      big: {
-        title: '标题标题',
-        subTitle: '副标题',
-        moreText: 'more'
-      },
-      small: {
-        title: '标题标题',
-        subTitle: '副标题',
-        moreText: ''
-      },
-      extremity: {
-        title: 'extremity极限标题标题',
-        subTitle: 'extremity极限标题标题副标题extremity极限标题标题副标题extremity极限标题标题副标题extremity极限标题标题副标题',
-        moreText: 'more more more'
-      },
-      five: {
-        title: '58专用标题',
-        subTitle: '58专用副标题',
-        moreText: 'more'
-      }
+      a0: '北京市朝阳区朝阳公园北路朝阳大街39 号4栋211',
+      a1: '北京市朝阳区朝阳公园北路朝阳大街39 号4栋211北京市朝阳区朝阳公园北路朝阳大街39 号4栋211北京市朝阳区朝阳公园北路朝阳大街39 号4栋211北京市朝阳区朝阳公园北路朝阳大街39 号4栋211'
     }
   },
   computed: {

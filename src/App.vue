@@ -36,7 +36,6 @@ export default {
 
 .nav
   font-size: .28rem
-  margin: 0 -.05rem
 
   a
     color: green
