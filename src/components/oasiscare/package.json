@@ -8,6 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  }
+  "bugs": {
+    "url": "https://github.com/feigebaobei/oasiscare/issues"
+  },
+  "homepage": "https://github.com/feigebaobei/oasiscare#readme"
 }
