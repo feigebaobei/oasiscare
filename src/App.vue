@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <nav>
+    <nav class="nav">
       <router-link to="/titleArea">titleArea</router-link>
-      <router-link to="/other">other</router-link>
+      <router-link to="/addressPhone">addressPhone</router-link>
     </nav>
     <div class="content">
       <router-view/>
@@ -33,5 +33,15 @@ export default {
   color: #2c3e50
   margin: 60px 0 0 0
   background-color: #f2f5f8
+
+.nav
+  font-size: .28rem
+  margin: 0 -.05rem
+
+  a
+    color: green
+    margin: 0 .08rem
+    border: 1px solid #f82
+    padding: .05rem .08rem
 
 </style>
