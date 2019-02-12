@@ -2,20 +2,20 @@
   <div class="titleArea">
     titleArea
     <h2>大标题</h2>
-    <title-area :title="big.title" :subTitle="big.subTitle" :hasMore="false" :eventTypeMore="'s'" @s="ss"></title-area>
+    <title-area :title="big.title" :subTitle="big.subTitle" :moreText="big.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
+    <title-area :title="big.title" :subTitle="big.subTitle":eventTypeMore="'s'" @s="ss"></title-area>
     <h2>小标题</h2>
-    <title-area :title="small.title" :subTitle="small.subTitle" :moreText="small.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
+    <title-area :title="small.title" :subTitle="small.subTitle" :hasMore="false" :eventTypeMore="'s'" @s="ss"></title-area>
     <h2>极限标题</h2>
     <title-area :title="extremity.title" :subTitle="extremity.subTitle" :moreText="extremity.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
     <h2>58标题</h2>
-    <first></first>
-    <five-eight></five-eight>
+    <five-eight :title="five.title" :subTitle="five.subTitle" :moreText="five.moreText"></five-eight>
     <!-- <five-eight :title="five.title" :subTitle="five.subTitle" :moreText="five.moreText" :eventTypeMore="'s'" @s="ss"></five-eight> -->
   </div>
 </template>
 
 <script>
-import {titleArea, first, fiveEight} from '@/components/oasiscare'
+import {titleArea, fiveEight} from '@/components/oasiscare'
 export default {
   props: {},
   data () {
@@ -28,12 +28,12 @@ export default {
       small: {
         title: '标题标题',
         subTitle: '副标题',
-        moreText: 'more'
+        moreText: ''
       },
       extremity: {
         title: 'extremity极限标题标题',
         subTitle: 'extremity极限标题标题副标题extremity极限标题标题副标题extremity极限标题标题副标题extremity极限标题标题副标题',
-        moreText: 'more'
+        moreText: 'more more more'
       },
       five: {
         title: '58专用标题',
@@ -46,7 +46,6 @@ export default {
   },
   components: {
     titleArea,
-    first,
     fiveEight
   },
   methods: {

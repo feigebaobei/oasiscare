@@ -8,13 +8,18 @@
     <div class="content">
       <router-view/>
     </div>
+    <footervue></footervue>
     <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import footervue from '@/components/footervue.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    footervue
+  }
 }
 </script>
 
