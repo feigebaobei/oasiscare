@@ -26,6 +26,66 @@ const icon = {
     x1: '',
     x2: require('../assets/imgs/phone2x.png'),
     x3: require('../assets/imgs/phone3x.png')
+  },
+  reject: {
+    x1: require('../assets/imgs/reject1x.png'),
+    x2: require('../assets/imgs/reject2x.png'),
+    x3: require('../assets/imgs/reject3x.png')
+  },
+  checking: {
+    x1: require('../assets/imgs/checking1x.png'),
+    x2: require('../assets/imgs/checking2x.png'),
+    x3: require('../assets/imgs/checking3x.png')
+  },
+  staleDate: {
+    x1: require('../assets/imgs/staleDate1x.png'),
+    x2: require('../assets/imgs/staleDate2x.png'),
+    x3: require('../assets/imgs/staleDate3x.png')
+  },
+  orderCancelGrey: {
+    x1: require('../assets/imgs/orderCancelGrey1x.png'),
+    x2: require('../assets/imgs/orderCancelGrey2x.png'),
+    x3: require('../assets/imgs/orderCancelGrey3x.png')
+  },
+  affirmGrey: {
+    x1: require('../assets/imgs/affirmGrey1x.png'),
+    x2: require('../assets/imgs/affirmGrey2x.png'),
+    x3: require('../assets/imgs/affirmGrey3x.png')
+  },
+  dealSuccessColor: {
+    x1: require('../assets/imgs/dealSuccessColor1x.png'),
+    x2: require('../assets/imgs/dealSuccessColor2x.png'),
+    x3: require('../assets/imgs/dealSuccessColor3x.png')
+  },
+  topayColor: {
+    x1: require('../assets/imgs/topayColor1x.png'),
+    x2: require('../assets/imgs/topayColor2x.png'),
+    x3: require('../assets/imgs/topayColor3x.png')
+  },
+  paidColor: {
+    x1: require('../assets/imgs/paidColor1x.png'),
+    x2: require('../assets/imgs/paidColor2x.png'),
+    x3: require('../assets/imgs/paidColor3x.png')
+  },
+  transportColor: {
+    x1: require('../assets/imgs/transportColor1x.png'),
+    x2: require('../assets/imgs/transportColor2x.png'),
+    x3: require('../assets/imgs/transportColor3x.png')
+  },
+  orderSuccessColor: {
+    x1: require('../assets/imgs/orderSuccessColor1x.png'),
+    x2: require('../assets/imgs/orderSuccessColor2x.png'),
+    x3: require('../assets/imgs/orderSuccessColor3x.png')
+  },
+  toServeColor: {
+    x1: require('../assets/imgs/toServeColor1x.png'),
+    x2: require('../assets/imgs/toServeColor2x.png'),
+    x3: require('../assets/imgs/toServeColor3x.png')
+  },
+  default: {
+    x1: require('../assets/imgs/toServeColor1x.png'),
+    x2: require('../assets/imgs/toServeColor1x.png'),
+    x3: require('../assets/imgs/toServeColor1x.png')
   }
 }
 const pic = {

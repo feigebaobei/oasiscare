@@ -28,6 +28,13 @@ export default new Router({
       path: '/addressPhone',
       name: '/addressPhone',
       component: addressPhone
+    },
+    {
+      path: '/orderStatus',
+      name: '/orderStatus',
+      component: resolve => {
+        require(['@/components/demo/orderStatus.vue'], resolve)
+      }
     }
   ]
 })

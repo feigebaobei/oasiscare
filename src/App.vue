@@ -4,6 +4,7 @@
     <nav class="nav">
       <router-link to="/titleArea">titleArea</router-link>
       <router-link to="/addressPhone">addressPhone</router-link>
+      <router-link to="/orderStatus">orderStatus</router-link>
     </nav>
     <div class="content">
       <router-view/>
