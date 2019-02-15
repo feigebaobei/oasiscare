@@ -102,10 +102,15 @@ const icon = {
     x2: require('../assets/imgs/delIcon2x.png'),
     x3: require('../assets/imgs/delIcon3x.png')
   },
+  medal: {
+    x1: require('../assets/imgs/medal1x.png'),
+    x2: require('../assets/imgs/medal2x.png'),
+    x3: require('../assets/imgs/medal3x.png')
+  },
   default: {
-    x1: require('../assets/imgs/toServeColor1x.png'),
-    x2: require('../assets/imgs/toServeColor1x.png'),
-    x3: require('../assets/imgs/toServeColor1x.png')
+    x1: require('../assets/imgs/default1x.png'),
+    x2: require('../assets/imgs/default1x.png'),
+    x3: require('../assets/imgs/default1x.png')
   }
 }
 const pic = {

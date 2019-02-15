@@ -261,30 +261,30 @@ export default {
         flex-shrink: 1
 
       .acfRight
-          flex-basis: 2.2rem
-          flex-grow: 0
-          flex-shrink: 0
+        flex-basis: 2.2rem
+        flex-grow: 0
+        flex-shrink: 0
+        display: flex
+        justify-content: space-between
+        flex-direction: row-reverse
+
+        .addressCardEdit
           display: flex
-          justify-content: space-between
-          flex-direction: row-reverse
+          align-items: center
+          // margin: 0 .64rem 0 0
 
-          .addressCardEdit
-            display: flex
-            align-items: center
-            // margin: 0 .64rem 0 0
+          img
+            width: .28rem
+            height: .28rem
+            margin: 0 $separate08 0 0
 
-            img
-              width: .28rem
-              height: .28rem
-              margin: 0 $separate08 0 0
+        .addressCardDel
+          display: flex
+          align-items: center
 
-          .addressCardDel
-            display: flex
-            align-items: center
-
-            img
-              width: .28rem
-              height: .28rem
-              margin: 0 $separate08 0 0
+          img
+            width: .28rem
+            height: .28rem
+            margin: 0 $separate08 0 0
 
 </style>

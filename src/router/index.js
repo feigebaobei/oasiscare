@@ -42,6 +42,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/addressCard.vue'], resolve)
       }
+    },
+    {
+      path: '/authentication',
+      name: '/authentication',
+      component: resolve => {
+        require(['@/components/demo/authentication.vue'], resolve)
+      }
     }
   ]
 })
