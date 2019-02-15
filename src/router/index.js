@@ -63,6 +63,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/hint.vue'], resolve)
       }
+    },
+    {
+      path: '/grade',
+      name: '/grade',
+      component: resolve => {
+        require(['@/components/demo/grade.vue'], resolve)
+      }
     }
   ]
 })

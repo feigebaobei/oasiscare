@@ -116,7 +116,7 @@ export default {
 
   .bottomTrue
     flex-basis: 100%
-    border-bottom: 2px solid $greyf
+    border-bottom: 1px solid $greyf
     height: $paddingBottom
     box-sizing: border-box
 

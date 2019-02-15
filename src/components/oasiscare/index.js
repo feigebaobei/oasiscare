@@ -9,6 +9,7 @@ import addressCard from './src/components/addressCard'
 import authentication from './src/components/authentication'
 import addressItem from './src/components/addressItem'
 import hint from './src/components/hint'
+import grade from './src/components/grade'
 export {
   first,
   second,
@@ -19,5 +20,6 @@ export {
   addressCard,
   authentication,
   addressItem,
-  hint
+  hint,
+  grade
 }

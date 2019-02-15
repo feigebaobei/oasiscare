@@ -29,7 +29,7 @@ export default {
     return {
       a0: {
         address: '北京市 朝阳区 北辰汇宾大厦19层a座 北辰汇宾大厦19层a座 北辰汇宾大厦19层a座北辰汇宾大厦19层a座北辰汇宾大厦19层a座北辰汇宾大厦19层a座',
-        name: 'name',
+        name: '姓名',
         phone: '18545545521',
         hasDefaultBt: false,
         hasEditBt: false,

@@ -112,6 +112,16 @@ const icon = {
     x2: require('../assets/imgs/hint2x.png'),
     x3: require('../assets/imgs/hint3x.png')
   },
+  yellowStar: {
+    x1: require('../assets/imgs/yellowStar1x.png'),
+    x2: require('../assets/imgs/yellowStar2x.png'),
+    x3: require('../assets/imgs/yellowStar3x.png')
+  },
+  greyStar: {
+    x1: require('../assets/imgs/greyStar1x.png'),
+    x2: require('../assets/imgs/greyStar2x.png'),
+    x3: require('../assets/imgs/greyStar3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),
