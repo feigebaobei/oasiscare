@@ -7,6 +7,7 @@ import addressPhone from './src/components/addressPhone'
 import orderStatus from './src/components/orderStatus'
 import addressCard from './src/components/addressCard'
 import authentication from './src/components/authentication'
+import addressItem from './src/components/addressItem'
 export {
   first,
   second,
@@ -15,5 +16,6 @@ export {
   addressPhone,
   orderStatus,
   addressCard,
-  authentication
+  authentication,
+  addressItem
 }

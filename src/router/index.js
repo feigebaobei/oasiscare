@@ -49,6 +49,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/authentication.vue'], resolve)
       }
+    },
+    {
+      path: '/addressItem',
+      name: '/addressItem',
+      component: resolve => {
+        require(['@/components/demo/addressItem.vue'], resolve)
+      }
     }
   ]
 })

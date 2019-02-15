@@ -7,6 +7,7 @@
       <router-link to="/orderStatus">orderStatus</router-link>
       <router-link to="/addressCard">addressCard</router-link>
       <router-link to="/authentication">authentication</router-link>
+      <router-link to="/addressItem">addressItem</router-link>
     </nav>
     <div class="content">
       <router-view/>
