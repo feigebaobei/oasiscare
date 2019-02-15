@@ -56,6 +56,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/addressItem.vue'], resolve)
       }
+    },
+    {
+      path: '/hint',
+      name: '/hint',
+      component: resolve => {
+        require(['@/components/demo/hint.vue'], resolve)
+      }
     }
   ]
 })

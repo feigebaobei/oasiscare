@@ -2,7 +2,7 @@
   <div class="addressItem">
     <div class="aiTitleBox">
       <div class="aiTitle">
-        <span v-for="(item) in title" v-html="item.text" class="aitItem" :class="[{active: item.active}]"></span>
+        <span v-for="(item, index) in title" :key="index" v-html="item.text" class="aitItem" :class="[{active: item.active}]"></span>
       </div>
       <h2 class="aiAddress" v-html="distance"></h2>
     </div>
@@ -83,7 +83,7 @@ export default {
     // flex-wrap: wrap
     align-items: center
     margin: 0 0 $separate08 0
-    
+
     .aiTitle
       flex-grow: 1
       flex-shrink: 1

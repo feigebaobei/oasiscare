@@ -14,7 +14,6 @@
 
 <script>
 import {addressItem} from '@/components/oasiscare'
-import { icon } from '@/lib/picMap.js'
 export default {
   props: {},
   data () {

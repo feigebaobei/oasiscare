@@ -107,6 +107,11 @@ const icon = {
     x2: require('../assets/imgs/medal2x.png'),
     x3: require('../assets/imgs/medal3x.png')
   },
+  hint: {
+    x1: require('../assets/imgs/hint1x.png'),
+    x2: require('../assets/imgs/hint2x.png'),
+    x3: require('../assets/imgs/hint3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),
