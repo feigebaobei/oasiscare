@@ -225,7 +225,7 @@ export default {
       padding: .44rem .28rem
 
       .addressCardInfoAddress
-        color: $block
+        color: $black
         font-size: .32rem
         line-height: .45rem
         margin: 0 0 $separate16 0
