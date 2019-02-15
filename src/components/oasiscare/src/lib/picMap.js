@@ -82,6 +82,26 @@ const icon = {
     x2: require('../assets/imgs/toServeColor2x.png'),
     x3: require('../assets/imgs/toServeColor3x.png')
   },
+  unSelectOnly: {
+    x1: require('../assets/imgs/unSelectOnly1x.png'),
+    x2: require('../assets/imgs/unSelectOnly2x.png'),
+    x3: require('../assets/imgs/unSelectOnly3x.png')
+  },
+  selectOnly: {
+    x1: require('../assets/imgs/selectOnly1x.png'),
+    x2: require('../assets/imgs/selectOnly2x.png'),
+    x3: require('../assets/imgs/selectOnly3x.png')
+  },
+  editIcon: {
+    x1: require('../assets/imgs/editIcon1x.png'),
+    x2: require('../assets/imgs/editIcon2x.png'),
+    x3: require('../assets/imgs/editIcon3x.png')
+  },
+  delIcon: {
+    x1: require('../assets/imgs/delIcon1x.png'),
+    x2: require('../assets/imgs/delIcon2x.png'),
+    x3: require('../assets/imgs/delIcon3x.png')
+  },
   default: {
     x1: require('../assets/imgs/toServeColor1x.png'),
     x2: require('../assets/imgs/toServeColor1x.png'),

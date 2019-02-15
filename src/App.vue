@@ -5,6 +5,7 @@
       <router-link to="/titleArea">titleArea</router-link>
       <router-link to="/addressPhone">addressPhone</router-link>
       <router-link to="/orderStatus">orderStatus</router-link>
+      <router-link to="/addressCard">addressCard</router-link>
     </nav>
     <div class="content">
       <router-view/>
@@ -39,8 +40,9 @@ export default {
   font-size: .28rem
 
   a
+    display: inline-block
     color: green
-    margin: 0 .08rem
+    margin: .1rem .08rem
     border: 1px solid #f82
     padding: .05rem .08rem
 

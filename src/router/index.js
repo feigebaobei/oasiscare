@@ -35,6 +35,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/orderStatus.vue'], resolve)
       }
+    },
+    {
+      path: '/addressCard',
+      name: '/addressCard',
+      component: resolve => {
+        require(['@/components/demo/addressCard.vue'], resolve)
+      }
     }
   ]
 })
