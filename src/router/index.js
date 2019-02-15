@@ -70,6 +70,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/grade.vue'], resolve)
       }
+    },
+    {
+      path: '/navItem',
+      name: '/navItem',
+      component: resolve => {
+        require(['@/components/demo/navItem.vue'], resolve)
+      }
     }
   ]
 })

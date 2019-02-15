@@ -10,6 +10,7 @@ import authentication from './src/components/authentication'
 import addressItem from './src/components/addressItem'
 import hint from './src/components/hint'
 import grade from './src/components/grade'
+import navItem from './src/components/navItem'
 export {
   first,
   second,
@@ -21,5 +22,6 @@ export {
   authentication,
   addressItem,
   hint,
-  grade
+  grade,
+  navItem
 }

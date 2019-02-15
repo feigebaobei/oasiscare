@@ -122,6 +122,11 @@ const icon = {
     x2: require('../assets/imgs/greyStar2x.png'),
     x3: require('../assets/imgs/greyStar3x.png')
   },
+  register: {
+    x1: require('../assets/imgs/register1x.png'),
+    x2: require('../assets/imgs/register2x.png'),
+    x3: require('../assets/imgs/register3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),
