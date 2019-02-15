@@ -70,6 +70,6 @@ export default {
     justify-content: space-between
 
     p
-      margin: 0  
+      margin: 0
 
 </style>
