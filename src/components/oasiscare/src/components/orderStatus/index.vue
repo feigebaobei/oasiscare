@@ -106,8 +106,8 @@ export default {
       font-weight: $fontWeightCommon
 
   .icon
-    width: .7rem
-    height: .7rem
+    width: 1.06rem
+    height: 1.06rem
     flex-grow: 0
     flex-shrink: 0
 
