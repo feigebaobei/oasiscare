@@ -1,0 +1,161 @@
+<!-- 当前版本没有验证功能 -->
+<template>
+  <div class="inputRadio">
+    <label-vue class="labelVue" :keyW="keyW" :keyAlign="keyAlign" :keyItem="keyItem" :isBold="isBold"></label-vue>
+    <span class="flower" v-if="isRequire">*</span>
+    <div class="optionBox">
+      <img-text v-for="(item, index) in compOptions" :key="index" :class="[{imgTextSeparate: index !== 0}]" :imgUrl="mRadioImg(item)" :text="item.text" :eventType="'triggerRadio'" @triggerRadio="triggerRadio" :data="item"></img-text>
+    </div>
+  </div>
+</template>
+
+<script>
+import label from './label.vue'
+import imgText from '../common/imgText.vue'
+// import { icon } from '../../lib/picMap.js'
+export default {
+  props: {
+    keyW: {
+      type: String, // 需要有单位
+      default: ''
+    },
+    keyAlign: {
+      type: String, // key的水平对齐方式。
+      default: 'left' // 'left', 'center', 'right', 'space-around', 'space-between'
+    },
+    keyItem: {
+      type: String,
+      default: ''
+    },
+    isBold: {
+      type: Boolean,
+      default: false
+    },
+    isRequire: {
+      type: Boolean,
+      default: false
+    },
+    value: {
+      default: null
+    },
+    options: {
+      // 当前版本没有点击选项时执行相应事件的功能
+      // 可以在父组件时监听value的改变
+      type: Array,
+      default () {
+        return [
+          // {
+          //   imgUrls: [
+          //     '', '' // 0：非选中，1：选中
+          //   ],
+          //   text: 'text',
+          //   value: 'value'
+          // }
+        ]
+      }
+    },
+    eventType: {
+      type: String,
+      default: ''
+    },
+    data: {
+      default () {
+        return {}
+      }
+    }
+  },
+  data () {
+    return {
+      dataOptions: []
+    }
+  },
+  computed: {
+    compOptions: {
+      set (value) {
+        let arr = []
+        let i = this.options.length - 1
+        while (i > -1) {
+          arr.push(this.options[i])
+          i--
+        }
+        this.dataOptions = arr
+      },
+      get () {
+        return this.dataOptions
+      }
+    }
+  },
+  components: {
+    labelVue: label,
+    imgText
+  },
+  methods: {
+    triggerDel () {
+      // 当前版本只做了删除value的功能。没有绑定自定义事件的功能
+      this.dataValue = ''
+    },
+    triggerDirt () {
+      if (this.eventTypeDirt) {
+        this.$emit(this.eventTypeDirt, this.dataDirt)
+      }
+    },
+    triggerRadio (data) {
+      this.$emit('input', data.value)
+    },
+    mRadioImg (data) {
+      // return data.value === this.value ? data.imgUrls[1] : data.imgUrls[0]
+      let img = ''
+      if (data.value === this.value) {
+        img = data.imgUrls[1]
+        if (img) {
+          return img
+        } else {
+          return icon.default.x2
+        }
+      } else {
+        img = data.imgUrls[0]
+        if (img) {
+          return img
+        } else {
+          return icon.default.x2
+        }
+      }
+    }
+  },
+  created () {},
+  mounted () {
+    this.compOptions = this.options
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+@import '../../assets/style/main.styl'
+
+.inputRadio
+  display: flex
+  justify-content: space-between
+  background-color: #fff
+  padding: $paddingTop4 $paddingRight $paddingBottom4 $paddingLeft
+  font-size: .28rem
+  line-height: .4rem
+  align-items: center
+
+  .labelVue
+    color: $black
+    margin: 0 $separate08 0 0
+
+  .flower
+    color: #fe3b2f
+    margin: 0
+
+  .optionBox
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row-reverse
+
+    .imgTextSeparate
+      margin: 0 1rem 0 0
+
+</style>
