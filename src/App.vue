@@ -14,6 +14,7 @@
       <router-link to="/infoItem">infoItem</router-link>
       <router-link to="/common">common</router-link>
       <router-link to="/inputText">inputText</router-link>
+      <router-link to="/inputRadio">inputRadio</router-link>
     </nav>
     <div class="content">
       <router-view/>

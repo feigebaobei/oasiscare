@@ -78,11 +78,25 @@ export default new Router({
         require(['@/components/demo/navItem.vue'], resolve)
       }
     },
+    // {
+    //   path: '/infoItem',
+    //   name: '/infoItem',
+    //   component: resolve => {
+    //     require(['@/components/demo/infoItem.vue'], resolve)
+    //   }
+    // },
     {
-      path: '/infoItem',
-      name: '/infoItem',
+      path: '/inputText',
+      name: '/inputText',
       component: resolve => {
-        require(['@/components/demo/infoItem.vue'], resolve)
+        require(['@/components/demo/formItem/inputText.vue'], resolve)
+      }
+    },
+    {
+      path: '/inputRadio',
+      name: '/inputRadio',
+      component: resolve => {
+        require(['@/components/demo/formItem/inputRadio.vue'], resolve)
       }
     },
     {
@@ -90,13 +104,6 @@ export default new Router({
       name: '/common',
       component: resolve => {
         require(['@/components/demo/common/index.vue'], resolve)
-      }
-    },
-    {
-      path: '/inputText',
-      name: '/inputText',
-      component: resolve => {
-        require(['@/components/demo/inputText.vue'], resolve)
       }
     }
   ]

@@ -68,6 +68,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hasBottom: {
+      type: Boolean,
+      default: true
+    },
     eventType: {
       type: String,
       default: ''
@@ -183,6 +187,7 @@ export default {
   font-size: .28rem
   line-height: .4rem
   align-items: center
+  flex-wrap: wrap
 
   .labelVue
     color: $black
@@ -217,12 +222,14 @@ export default {
 
   .bottomTrue
     flex-basis: 100%
+    flex-shrink: 0
     height: $paddingBottom4
     border-bottom: 0.01rem solid $greyf
     box-sizing: border-box
 
   .bottomFalse
     flex-basis: 100%
+    flex-shrink: 0
     height: $paddingBottom4
     border: none
     box-sizing: border-box

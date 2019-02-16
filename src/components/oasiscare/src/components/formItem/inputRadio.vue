@@ -1,11 +1,15 @@
 <!-- 当前版本没有验证功能 -->
 <template>
   <div class="inputRadio">
-    <label-vue class="labelVue" :keyW="keyW" :keyAlign="keyAlign" :keyItem="keyItem" :isBold="isBold"></label-vue>
-    <span class="flower" v-if="isRequire">*</span>
-    <div class="optionBox">
-      <img-text v-for="(item, index) in compOptions" :key="index" :class="[{imgTextSeparate: index !== 0}]" :imgUrl="mRadioImg(item)" :text="item.text" :eventType="'triggerRadio'" @triggerRadio="triggerRadio" :data="item"></img-text>
+    <div class="irCont">
+      <label-vue class="labelVue" :keyW="keyW" :keyAlign="keyAlign" :keyItem="keyItem" :isBold="isBold"></label-vue>
+      <span class="flower" v-if="isRequire">*</span>
+      <div class="optionBox">
+        <img-text v-for="(item, index) in compOptions" :key="index" :class="[{imgTextSeparate: index !== 0}]" :imgUrl="mRadioImg(item)" :text="item.text" :eventType="'triggerRadio'" @triggerRadio="triggerRadio" :data="item"></img-text>
+      </div>
     </div>
+    <div class="bottomTrue" v-if="hasBottom"></div>
+    <div class="bottomFalse" v-else></div>
   </div>
 </template>
 
@@ -53,6 +57,10 @@ export default {
           // }
         ]
       }
+    },
+    hasBottom: {
+      type: Boolean,
+      default: true
     },
     eventType: {
       type: String,
@@ -134,28 +142,46 @@ export default {
 
 .inputRadio
   display: flex
+  flex-wrap: wrap
   justify-content: space-between
   background-color: #fff
-  padding: $paddingTop4 $paddingRight $paddingBottom4 $paddingLeft
+  padding: $paddingTop4 $paddingRight 0 $paddingLeft
   font-size: .28rem
   line-height: .4rem
   align-items: center
 
-  .labelVue
-    color: $black
-    margin: 0 $separate08 0 0
-
-  .flower
-    color: #fe3b2f
-    margin: 0
-
-  .optionBox
-    flex-grow: 1
-    flex-shrink: 1
+  .irCont
     display: flex
-    flex-direction: row-reverse
 
-    .imgTextSeparate
-      margin: 0 1rem 0 0
+    .labelVue
+      color: $black
+      margin: 0 $separate08 0 0
 
+    .flower
+      color: #fe3b2f
+      margin: 0
+
+    .optionBox
+      flex-grow: 1
+      flex-shrink: 1
+      display: flex
+      flex-direction: row-reverse
+      margin: 0 0 0 $separate28
+
+      .imgTextSeparate
+        margin: 0 1rem 0 0
+
+  .bottomTrue
+    flex-basis: 100%
+    flex-shrink: 0
+    height: $paddingBottom4
+    border-bottom: 0.01rem solid $greyf
+    box-sizing: border-box
+
+  .bottomFalse
+    flex-basis: 100%
+    flex-shrink: 0
+    height: $paddingBottom4
+    border: none
+    box-sizing: border-box
 </style>
