@@ -6,6 +6,8 @@
     <input class="input" :style="[compAlign]" type="text" placeholder="placeHolder" v-model="dataValue">
     <img class="delIcon" :src="compDelIcon" alt="" v-if="compHasDelIcon" @click="triggerDel">
     <img class="dirtIcon" :src="compDirtIcon" alt="" v-if="hasDirtIcon" @click="triggerDirt">
+    <div class="bottomTrue" v-if="hasBottom"></div>
+    <div class="bottomFalse" v-else></div>
   </div>
 </template>
 
@@ -87,7 +89,7 @@ export default {
   },
   data () {
     return {
-      dataValue: this.value,
+      dataValue: this.value
       // dataHasDelIcon: this.hasDelIcon
     }
   },
@@ -144,7 +146,7 @@ export default {
       } else {
         return icon.arrowsBig.x2
       }
-    },
+    }
   },
   watch: {
     dataValue: function (newValue, oldValue) {
@@ -177,7 +179,7 @@ export default {
   display: flex
   justify-content: space-between
   background-color: #fff
-  padding: $paddingTop4 $paddingRight $paddingBottom4 $paddingLeft
+  padding: $paddingTop4 $paddingRight 0 $paddingLeft
   font-size: .28rem
   line-height: .4rem
   align-items: center
@@ -213,4 +215,15 @@ export default {
     height: .28rem
     margin: 0 0 0 $separate24
 
+  .bottomTrue
+    flex-basis: 100%
+    height: $paddingBottom4
+    border-bottom: 0.01rem solid $greyf
+    box-sizing: border-box
+
+  .bottomFalse
+    flex-basis: 100%
+    height: $paddingBottom4
+    border: none
+    box-sizing: border-box
 </style>
