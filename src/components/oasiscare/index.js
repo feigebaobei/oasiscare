@@ -11,6 +11,7 @@ import addressItem from './src/components/addressItem'
 import hint from './src/components/hint'
 import grade from './src/components/grade'
 import navItem from './src/components/navItem'
+import infoItem from './src/components/infoItem'
 export {
   first,
   second,
@@ -23,5 +24,6 @@ export {
   addressItem,
   hint,
   grade,
-  navItem
+  navItem,
+  infoItem
 }

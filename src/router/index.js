@@ -77,6 +77,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/navItem.vue'], resolve)
       }
+    },
+    {
+      path: '/infoItem',
+      name: '/infoItem',
+      component: resolve => {
+        require(['@/components/demo/infoItem.vue'], resolve)
+      }
     }
   ]
 })
