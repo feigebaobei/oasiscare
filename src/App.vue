@@ -12,6 +12,8 @@
       <router-link to="/grade">grade</router-link>
       <router-link to="/navItem">navItem</router-link>
       <router-link to="/infoItem">infoItem</router-link>
+      <router-link to="/common">common</router-link>
+      <router-link to="/inputText">inputText</router-link>
     </nav>
     <div class="content">
       <router-view/>

@@ -1,5 +1,6 @@
+<!-- 这个组件放在这里是计划只用于formItem.不用于common -->
 <template>
-  <div class="infoItem">
+  <div class="label" :class="[{labelBold: isBold}]">
     <div class="keyBox space-between" :style="[compKeyW]" v-if="keyAlign === 'space-between'">
       <span v-for="(item, index) in keys" :key="index" v-html="item"></span>
     </div>
@@ -9,9 +10,6 @@
     <div class="keyBox" :style="[compKeyW]" v-if="['left', 'center', 'right'].indexOf(keyAlign) > -1">
       <span :style="[compAlign]" v-html="keyItem"></span>
     </div>
-    <div class="valueBox">
-      <slot><span class="valueSpan" v-html="value"></span></slot>
-    </div>
   </div>
 </template>
 
@@ -20,7 +18,6 @@ export default {
   props: {
     keyW: {
       type: String, // 需要有单位
-      // default: '1.4rem'
       default: ''
     },
     keyAlign: {
@@ -30,6 +27,10 @@ export default {
     keyItem: {
       type: String,
       default: ''
+    },
+    isBold: {
+      type: Boolean,
+      default: false
     },
     value: {
       type: [String, Number],
@@ -47,7 +48,8 @@ export default {
     },
     compKeyW () {
       let obj = {
-        flexBasis: this.keyW
+        // flexBasis: this.keyW
+        width: this.keyW
       }
       return obj
     },
@@ -82,20 +84,10 @@ export default {
 <style lang="stylus" scoped>
 @import '../../assets/style/main.styl'
 
-.infoItem
-  display: flex
+.label
 
   .keyBox
-    color: $grey9
-    margin: 0 $separate24 0 0
-    font-weight: $fontWeightBold
-    flex-grow: 0
-    flex-shrink: 0
     display: flex
-
-    span
-      display: inline-block
-      font-size: .28rem
 
   .space-around
     justify-content: space-around
@@ -103,13 +95,7 @@ export default {
   .space-between
     justify-content: space-between
 
-  .valueBox
-    display: flex
-
-    .valueSpan
-      font-size: .28rem
-      color: $grey6
-      flex-grow: 1
-      flex-shrink: 1
+.labelBold
+  font-weight: $fontWeightBold
 
 </style>

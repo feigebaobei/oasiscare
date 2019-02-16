@@ -12,6 +12,10 @@ import hint from './src/components/hint'
 import grade from './src/components/grade'
 import navItem from './src/components/navItem'
 import infoItem from './src/components/infoItem'
+import inputText from './src/components/formItem/inputText'
+// import inputRadio from './src/components/formItem/inputRadio'
+// import inputCheckbox from './src/components/formItem/inputCheckbox'
+import imgText from './src/components/common/imgText'
 export {
   first,
   second,
@@ -25,5 +29,9 @@ export {
   hint,
   grade,
   navItem,
-  infoItem
+  infoItem,
+  imgText,
+  inputText
+//   inputRadio
+// inputCheckbox
 }

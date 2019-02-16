@@ -17,6 +17,11 @@ const icon = {
     x2: require('../assets/imgs/arrows2x.png'),
     x3: require('../assets/imgs/arrows3x.png')
   },
+  arrowsBig: {
+    x1: require('../assets/imgs/arrowsBig1x.png'),
+    x2: require('../assets/imgs/arrowsBig2x.png'),
+    x3: require('../assets/imgs/arrowsBig3x.png')
+  },
   address: {
     x1: require('../assets/imgs/address1x.png'),
     x2: require('../assets/imgs/address2x.png'),
@@ -126,6 +131,11 @@ const icon = {
     x1: require('../assets/imgs/register1x.png'),
     x2: require('../assets/imgs/register2x.png'),
     x3: require('../assets/imgs/register3x.png')
+  },
+  closeGrey: {
+    x1: require('../assets/imgs/closeGrey1x.png'),
+    x2: require('../assets/imgs/closeGrey2x.png'),
+    x3: require('../assets/imgs/closeGrey3x.png')
   },
   default: {
     x1: require('../assets/imgs/default1x.png'),

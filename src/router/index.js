@@ -84,6 +84,20 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/infoItem.vue'], resolve)
       }
+    },
+    {
+      path: '/common',
+      name: '/common',
+      component: resolve => {
+        require(['@/components/demo/common/index.vue'], resolve)
+      }
+    },
+    {
+      path: '/inputText',
+      name: '/inputText',
+      component: resolve => {
+        require(['@/components/demo/inputText.vue'], resolve)
+      }
     }
   ]
 })
