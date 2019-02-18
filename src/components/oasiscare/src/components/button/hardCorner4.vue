@@ -1,6 +1,6 @@
 <!-- 圆角为4的硬角button -->
 <template>
-  <div class="hardCorner4" :class="[compArea]" :style="[compW, compColor, compBorder, compBdr, compBg]">
+  <div class="hardCorner4" :class="[compArea]" :style="[compW, compColor, compBorder, compBdr, compBg]" @click="trigger">
     <span class="hcText" v-html="text"></span>
   </div>
 </template>
@@ -39,6 +39,15 @@ export default {
     area: {
       type: String,
       default: 'big' // 'big': 36, 'middle': 32, 'small': 28
+    },
+    eventType: {
+      type: String,
+      default: ''
+    },
+    data: {
+      default () {
+        return {}
+      }
     }
   },
   data () {
@@ -92,7 +101,13 @@ export default {
   },
   components: {
   },
-  methods: {},
+  methods: {
+    trigger () {
+      if (this.eventType) {
+        this.$emit(this.eventType, this.data)
+      }
+    }
+  },
   created () {},
   mounted () {}
 }
