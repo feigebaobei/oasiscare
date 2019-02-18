@@ -17,6 +17,7 @@ import inputRadio from './src/components/formItem/inputRadio'
 // import inputCheckbox from './src/components/formItem/inputCheckbox'
 import imgText from './src/components/common/imgText'
 import hardCorner4 from './src/components/button/hardCorner4'
+import softCorner from './src/components/button/softCorner'
 export {
   first,
   second,
@@ -35,5 +36,6 @@ export {
   inputText,
   inputRadio,
   // inputCheckbox
-  hardCorner4
+  hardCorner4,
+  softCorner
 }

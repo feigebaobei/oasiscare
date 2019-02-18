@@ -125,7 +125,6 @@ export default {
   display: inline-flex
   box-sizing: border-box
 
-
 .big
 
   padding: .02rem .08rem

@@ -16,6 +16,7 @@
       <router-link to="/inputText">inputText</router-link>
       <router-link to="/inputRadio">inputRadio</router-link>
       <router-link to="/hardCorner">hardCorner</router-link>
+      <router-link to="/softCorner">softCorner</router-link>
     </nav>
     <div class="content">
       <router-view/>

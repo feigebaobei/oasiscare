@@ -119,6 +119,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/hardCorner.vue'], resolve)
       }
+    },
+    {
+      path: '/softCorner',
+      name: '/softCorner',
+      component: resolve => {
+        require(['@/components/demo/softCorner.vue'], resolve)
+      }
     }
   ]
 })

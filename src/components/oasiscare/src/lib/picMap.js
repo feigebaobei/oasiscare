@@ -137,6 +137,11 @@ const icon = {
     x2: require('../assets/imgs/closeGrey2x.png'),
     x3: require('../assets/imgs/closeGrey3x.png')
   },
+  delBt: {
+    x1: require('../assets/imgs/delBt1x.png'),
+    x2: require('../assets/imgs/delBt2x.png'),
+    x3: require('../assets/imgs/delBt3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),
