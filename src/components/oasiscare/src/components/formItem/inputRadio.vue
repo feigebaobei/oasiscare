@@ -16,7 +16,7 @@
 <script>
 import label from './label.vue'
 import imgText from '../common/imgText.vue'
-// import { icon } from '../../lib/picMap.js'
+import { icon } from '../../lib/picMap.js'
 export default {
   props: {
     keyW: {
@@ -111,21 +111,21 @@ export default {
       this.$emit('input', data.value)
     },
     mRadioImg (data) {
-      // return data.value === this.value ? data.imgUrls[1] : data.imgUrls[0]
       let img = ''
+      let imgUrls = data.imgUrls || ['', '']
       if (data.value === this.value) {
-        img = data.imgUrls[1]
+        img = imgUrls[1]
         if (img) {
           return img
         } else {
-          return icon.default.x2
+          return icon.selectOnly.x2
         }
       } else {
-        img = data.imgUrls[0]
+        img = imgUrls[0]
         if (img) {
           return img
         } else {
-          return icon.default.x2
+          return icon.unSelectOnly.x2
         }
       }
     }
@@ -152,6 +152,7 @@ export default {
 
   .irCont
     display: flex
+    flex-basis: 100%
 
     .labelVue
       color: $black

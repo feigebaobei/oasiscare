@@ -2,21 +2,20 @@
   <div class="basic">
     <h2>基本样式</h2>
     <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
-    <!-- <h2>多种label对齐方式</h2>
-    <input-text :keyItem="a1.keyItem" :keyW="a1.keyW" :keyAlign="'left'" :placeHolder="a1.placeHolder" :placeHolderAlign="a1.placeHolderAlign" v-model="a1.value" :valueAlign="a1.valueAlign"></input-text>
-    <input-text :keyItem="a1.keyItem" :keyW="a1.keyW" :keyAlign="'center'" :placeHolder="a1.placeHolder" :placeHolderAlign="a1.placeHolderAlign" v-model="a1.value" :valueAlign="a1.valueAlign"></input-text>
-    <input-text :keyItem="a1.keyItem" :keyW="a1.keyW" :keyAlign="'right'" :placeHolder="a1.placeHolder" :placeHolderAlign="a1.placeHolderAlign" v-model="a1.value" :valueAlign="a1.valueAlign"></input-text>
-    <input-text :keyItem="a1.keyItem" :keyW="a1.keyW" :keyAlign="'space-around'" :placeHolder="a1.placeHolder" :placeHolderAlign="a1.placeHolderAlign" v-model="a1.value" :valueAlign="a1.valueAlign"></input-text>
-    <input-text :keyItem="a1.keyItem" :keyW="a1.keyW" :keyAlign="'space-between'" :placeHolder="a1.placeHolder" :placeHolderAlign="a1.placeHolderAlign" v-model="a1.value" :valueAlign="a1.valueAlign"></input-text>
-    <h2>多种文本样式</h2>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'left'" v-model="a0.value" :valueAlign="a0.valueAlign"></input-text>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'center'" v-model="a0.value" :valueAlign="a0.valueAlign"></input-text>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'right'" v-model="a0.value" :valueAlign="a0.valueAlign"></input-text>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'left'" v-model="a0.value" :valueAlign="'left'"></input-text>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'left'" v-model="a0.value" :valueAlign="'center'"></input-text>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'left'" v-model="a0.value" :valueAlign="'right'"></input-text>
+    <h2>多种label对齐方式</h2>
+    <input-radio :keyItem="a0.keyItem" :keyW="a1.keyW" :keyAlign="'left'" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyW="a1.keyW" :keyAlign="'center'" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyW="a1.keyW" :keyAlign="'right'" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyW="a1.keyW" :keyAlign="'space-around'" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyW="a1.keyW" :keyAlign="'space-between'" :isBold="a0.isBold" :options="a0.options" v-model="a0.value"></input-radio>
+    <h2>多个选项样式</h2>
+    <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :options="a1.options" v-model="a0.value"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :options="a2.options" v-model="a0.value"></input-radio>
     <h2>必填符样式</h2>
-    <input-text :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isRequire="true" :isBold="a0.isBold" :placeHolder="a0.placeHolder" :placeHolderAlign="'left'" v-model="a0.value" :valueAlign="'right'"></input-text> -->
+    <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :isRequire="a0.isRequire" :options="a0.options" v-model="a0.value"></input-radio>
+    <h2>无下边框</h2>
+    <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :isRequire="a0.isRequire" :options="a0.options" v-model="a0.value" :hasBottom="false"></input-radio>
+    <input-radio :keyItem="a0.keyItem" :keyAlign="a0.keyAlign" :isBold="a0.isBold" :isRequire="a0.isRequire" :options="a0.options" v-model="a0.value" :hasBottom="false"></input-radio>
   </div>
 </template>
 
@@ -28,6 +27,32 @@ export default {
   data () {
     return {
       a0: {
+        keyItem: '身份证号',
+        keyW: '2rem',
+        keyAlign: 'space-between',
+        isBold: true,
+        isRequire: true,
+        options: [
+          {
+            imgUrls: [
+              '',
+              ''
+            ],
+            text: 'first',
+            value: 'no1'
+          },
+          {
+            // imgUrls: [
+            //   '',
+            //   ''
+            // ],
+            text: 'second',
+            value: 'no2'
+          }
+        ],
+        value: null
+      },
+      a1: {
         keyItem: '身份证号',
         keyW: '2rem',
         keyAlign: 'space-between',
@@ -60,41 +85,46 @@ export default {
         ],
         value: null
       },
-      a1: {
-        keyItem: '身份证号',
-        keyW: '2rem',
-        keyAlign: 'space-between',
-        isBold: true,
-        delImgUrl: icon.logo.x1,
-        dirtImgUrl: icon.test.x1,
-        placeHolder: 'placeHolder',
-        placeHolderAlign: 'left',
-        value: 'value',
-        valueAlign: 'right'
-      },
       a2: {
         keyItem: '身份证号',
         keyW: '2rem',
         keyAlign: 'space-between',
         isBold: true,
-        delImgUrl: icon.logo.x1,
-        dirtImgUrl: icon.test.x1,
-        placeHolder: 'placeHolder',
-        placeHolderAlign: 'left',
-        value: 'value',
-        valueAlign: 'right'
-      },
-      a3: {
-        keyItem: '身份证号',
-        keyW: '2rem',
-        keyAlign: 'space-between',
-        isBold: true,
-        delImgUrl: icon.logo.x1,
-        dirtImgUrl: icon.test.x1,
-        placeHolder: 'placeHolder',
-        placeHolderAlign: 'left',
-        value: 'value',
-        valueAlign: 'right'
+        options: [
+          {
+            imgUrls: [
+              icon.logo.x1,
+              icon.test.x1
+            ],
+            text: 'first',
+            value: 'no1'
+          },
+          {
+            imgUrls: [
+              icon.logo.x1,
+              icon.test.x1
+            ],
+            text: 'second',
+            value: 'no2'
+          },
+          {
+            imgUrls: [
+              icon.logo.x1,
+              icon.test.x1
+            ],
+            text: 'three',
+            value: 'no3'
+          },
+          {
+            imgUrls: [
+              icon.logo.x1,
+              icon.test.x1
+            ],
+            text: 'four',
+            value: 'no4'
+          }
+        ],
+        value: null
       }
     }
   },
