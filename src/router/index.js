@@ -78,11 +78,18 @@ export default new Router({
         require(['@/components/demo/navItem.vue'], resolve)
       }
     },
+    {
+      path: '/infoItem',
+      name: '/infoItem',
+      component: resolve => {
+        require(['@/components/demo/infoItem.vue'], resolve)
+      }
+    },
     // {
-    //   path: '/infoItem',
-    //   name: '/infoItem',
+    //   path: '/formItem',
+    //   name: '/formItem',
     //   component: resolve => {
-    //     require(['@/components/demo/infoItem.vue'], resolve)
+    //     require(['@/components/demo/formItem.vue'], resolve)
     //   }
     // },
     {
