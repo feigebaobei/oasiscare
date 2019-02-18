@@ -51,8 +51,8 @@ export default {
 
   .hintIcon
     width: .19rem
-    height: .16rem
-    margin: 0 $separate24 0 0
+    height: .24rem
+    margin: 0 $separate16 0 0
 
   .hintText
     color: $grey6
