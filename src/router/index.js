@@ -161,6 +161,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/directionItem.vue'], resolve)
       }
+    },
+    {
+      path: '/serveCard',
+      name: '/serveCard',
+      component: resolve => {
+        require(['@/components/demo/serveCard.vue'], resolve)
+      }
     }
   ]
 })

@@ -23,6 +23,7 @@ import step from './src/components/step'
 import orderInfoItem from './src/components/orderInfoItem'
 import drug from './src/components/drug'
 import directionItem from './src/components/directionItem'
+import serveCard from './src/components/serveCard'
 export {
   first,
   second,
@@ -47,5 +48,6 @@ export {
   step,
   orderInfoItem,
   drug,
-  directionItem
+  directionItem,
+  serveCard
 }

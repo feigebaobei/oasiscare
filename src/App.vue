@@ -21,6 +21,7 @@
       <router-link to="/orderInfoItem">orderInfoItem</router-link>
       <router-link to="/drug">drug</router-link>
       <router-link to="/directionItem">directionItem</router-link>
+      <router-link to="/serveCard">serveCard</router-link>
     </nav>
     <div class="content">
       <router-view/>
