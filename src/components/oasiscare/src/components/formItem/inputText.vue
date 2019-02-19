@@ -206,6 +206,7 @@ export default {
     height: .4rem
     padding: 0
     margin: 0 0 0 $separate28
+    font-size: .28rem
 
   .input:focus
     outline: none
