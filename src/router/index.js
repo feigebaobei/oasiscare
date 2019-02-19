@@ -147,6 +147,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/orderInfoItem.vue'], resolve)
       }
+    },
+    {
+      path: '/drug',
+      name: '/drug',
+      component: resolve => {
+        require(['@/components/demo/drug.vue'], resolve)
+      }
     }
   ]
 })

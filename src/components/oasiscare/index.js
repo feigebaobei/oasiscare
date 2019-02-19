@@ -20,6 +20,7 @@ import hardCorner4 from './src/components/button/hardCorner4'
 import softCorner from './src/components/button/softCorner'
 import step from './src/components/step'
 import orderInfoItem from './src/components/orderInfoItem'
+import drug from './src/components/drug'
 export {
   first,
   second,
@@ -41,5 +42,6 @@ export {
   hardCorner4,
   softCorner,
   step,
-  orderInfoItem
+  orderInfoItem,
+  drug
 }
