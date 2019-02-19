@@ -170,11 +170,11 @@ export default {
           font-size: .24rem
           line-height: .28rem
 
-  .oiRangeBox
-    margin: 0
-    color: $grey9
-    font-size: .24rem
-    line-height: .33rem
-    flex-basis: 100%
+    .oiRangeBox
+      margin: 0
+      color: $grey9
+      font-size: .24rem
+      line-height: .33rem
+      flex-basis: 100%
 
 </style>
