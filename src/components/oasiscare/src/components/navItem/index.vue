@@ -160,7 +160,7 @@ export default {
       width: .36rem
       height: .36rem
       display: block
-      margin: 0 auto .05rem auto
+      margin: 0 auto .04rem auto
 
     .niTitle
       text-align: center
