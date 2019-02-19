@@ -142,6 +142,56 @@ const icon = {
     x2: require('../assets/imgs/delBt2x.png'),
     x3: require('../assets/imgs/delBt3x.png')
   },
+  lineStepDashed: {
+    x1: require('../assets/imgs/lineStepDashed1x.png'),
+    x2: require('../assets/imgs/lineStepDashed2x.png'),
+    x3: require('../assets/imgs/lineStepDashed3x.png')
+  },
+  lineStepSolid: {
+    x1: require('../assets/imgs/lineStepSolid1x.png'),
+    x2: require('../assets/imgs/lineStepSolid2x.png'),
+    x3: require('../assets/imgs/lineStepSolid3x.png')
+  },
+  submitedGrey: {
+    x1: require('../assets/imgs/submitedGrey1x.png'),
+    x2: require('../assets/imgs/submitedGrey2x.png'),
+    x3: require('../assets/imgs/submitedGrey3x.png')
+  },
+  releaseGrey: {
+    x1: require('../assets/imgs/releaseGrey1x.png'),
+    x2: require('../assets/imgs/releaseGrey2x.png'),
+    x3: require('../assets/imgs/releaseGrey3x.png')
+  },
+  servingGrey: {
+    x1: require('../assets/imgs/servingGrey1x.png'),
+    x2: require('../assets/imgs/servingGrey2x.png'),
+    x3: require('../assets/imgs/servingGrey3x.png')
+  },
+  servedGrey: {
+    x1: require('../assets/imgs/servedGrey1x.png'),
+    x2: require('../assets/imgs/servedGrey2x.png'),
+    x3: require('../assets/imgs/servedGrey3x.png')
+  },
+  submitedColor: {
+    x1: require('../assets/imgs/submitedColor1x.png'),
+    x2: require('../assets/imgs/submitedColor2x.png'),
+    x3: require('../assets/imgs/submitedColor3x.png')
+  },
+  releaseColor: {
+    x1: require('../assets/imgs/releaseColor1x.png'),
+    x2: require('../assets/imgs/releaseColor2x.png'),
+    x3: require('../assets/imgs/releaseColor3x.png')
+  },
+  servingColor: {
+    x1: require('../assets/imgs/servingColor1x.png'),
+    x2: require('../assets/imgs/servingColor2x.png'),
+    x3: require('../assets/imgs/servingColor3x.png')
+  },
+  servedColor: {
+    x1: require('../assets/imgs/servedColor1x.png'),
+    x2: require('../assets/imgs/servedColor2x.png'),
+    x3: require('../assets/imgs/servedColor3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),

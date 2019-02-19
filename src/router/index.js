@@ -126,6 +126,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/softCorner.vue'], resolve)
       }
+    },
+    {
+      path: '/step',
+      name: '/step',
+      component: resolve => {
+        require(['@/components/demo/step.vue'], resolve)
+      }
     }
   ]
 })
