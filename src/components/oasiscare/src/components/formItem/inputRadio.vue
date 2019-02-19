@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import label from './label.vue'
+import label from '../common/label.vue'
 import imgText from '../common/imgText.vue'
 import { icon } from '../../lib/picMap.js'
 export default {
