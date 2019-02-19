@@ -133,6 +133,20 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/step.vue'], resolve)
       }
+    },
+    // {
+    //   path: '/assetCard',
+    //   name: '/assetCard',
+    //   component: resolve => {
+    //     require(['@/components/demo/assetCard.vue'], resolve)
+    //   }
+    // },
+    {
+      path: '/orderInfoItem',
+      name: '/orderInfoItem',
+      component: resolve => {
+        require(['@/components/demo/orderInfoItem.vue'], resolve)
+      }
     }
   ]
 })

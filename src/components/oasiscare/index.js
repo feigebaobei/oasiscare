@@ -19,6 +19,7 @@ import imgText from './src/components/common/imgText'
 import hardCorner4 from './src/components/button/hardCorner4'
 import softCorner from './src/components/button/softCorner'
 import step from './src/components/step'
+import orderInfoItem from './src/components/orderInfoItem'
 export {
   first,
   second,
@@ -39,5 +40,6 @@ export {
   // inputCheckbox
   hardCorner4,
   softCorner,
-  step
+  step,
+  orderInfoItem
 }

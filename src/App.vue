@@ -18,6 +18,7 @@
       <router-link to="/hardCorner">hardCorner</router-link>
       <router-link to="/softCorner">softCorner</router-link>
       <router-link to="/step">step</router-link>
+      <router-link to="/orderInfoItem">orderInfoItem</router-link>
     </nav>
     <div class="content">
       <router-view/>
