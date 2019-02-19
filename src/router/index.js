@@ -154,6 +154,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/drug.vue'], resolve)
       }
+    },
+    {
+      path: '/directionItem',
+      name: '/directionItem',
+      component: resolve => {
+        require(['@/components/demo/directionItem.vue'], resolve)
+      }
     }
   ]
 })

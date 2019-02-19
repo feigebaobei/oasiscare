@@ -34,7 +34,7 @@ export default {
         keyW: '2rem',
         keyAlign: 'center',
         keyItem: '飞机坦克',
-        isBold: true,
+        isBold: true
       }
     }
   },

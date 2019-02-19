@@ -16,11 +16,13 @@ import inputText from './src/components/formItem/inputText'
 import inputRadio from './src/components/formItem/inputRadio'
 // import inputCheckbox from './src/components/formItem/inputCheckbox'
 import imgText from './src/components/common/imgText'
+import label from './src/components/common/label'
 import hardCorner4 from './src/components/button/hardCorner4'
 import softCorner from './src/components/button/softCorner'
 import step from './src/components/step'
 import orderInfoItem from './src/components/orderInfoItem'
 import drug from './src/components/drug'
+import directionItem from './src/components/directionItem'
 export {
   first,
   second,
@@ -36,6 +38,7 @@ export {
   navItem,
   infoItem,
   imgText,
+  label,
   inputText,
   inputRadio,
   // inputCheckbox
@@ -43,5 +46,6 @@ export {
   softCorner,
   step,
   orderInfoItem,
-  drug
+  drug,
+  directionItem
 }

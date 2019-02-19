@@ -20,6 +20,7 @@
       <router-link to="/step">step</router-link>
       <router-link to="/orderInfoItem">orderInfoItem</router-link>
       <router-link to="/drug">drug</router-link>
+      <router-link to="/directionItem">directionItem</router-link>
     </nav>
     <div class="content">
       <router-view/>
