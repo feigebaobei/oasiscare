@@ -31,10 +31,6 @@ export default {
     isBold: {
       type: Boolean,
       default: false
-    },
-    value: {
-      type: [String, Number],
-      default: ''
     }
   },
   data () {
