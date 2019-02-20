@@ -17,7 +17,7 @@ import inputRadio from './src/components/formItem/inputRadio'
 // import inputCheckbox from './src/components/formItem/inputCheckbox'
 import imgText from './src/components/common/imgText'
 import label from './src/components/common/label'
-import hardCorner4 from './src/components/button/hardCorner4'
+import hardCorner from './src/components/button/hardCorner'
 import softCorner from './src/components/button/softCorner'
 import step from './src/components/step'
 import orderInfoItem from './src/components/orderInfoItem'
@@ -44,7 +44,7 @@ export {
   inputText,
   inputRadio,
   // inputCheckbox
-  hardCorner4,
+  hardCorner,
   softCorner,
   step,
   orderInfoItem,
