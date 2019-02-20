@@ -175,6 +175,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/hospitalCard.vue'], resolve)
       }
+    },
+    {
+      path: '/hospitalCardInfo',
+      name: '/hospitalCardInfo',
+      component: resolve => {
+        require(['@/components/demo/hospitalCardInfo.vue'], resolve)
+      }
     }
   ]
 })

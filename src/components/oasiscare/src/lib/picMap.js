@@ -192,6 +192,11 @@ const icon = {
     x2: require('../assets/imgs/servedColor2x.png'),
     x3: require('../assets/imgs/servedColor3x.png')
   },
+  timeIcon: {
+    x1: require('../assets/imgs/timeIcon1x.png'),
+    x2: require('../assets/imgs/timeIcon2x.png'),
+    x3: require('../assets/imgs/timeIcon3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),

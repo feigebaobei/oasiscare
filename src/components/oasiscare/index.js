@@ -26,6 +26,7 @@ import directionItem from './src/components/directionItem'
 import serveCard from './src/components/serveCard'
 import serveCardFeature from './src/components/serveCard/feature'
 import hospitalCard from './src/components/hospitalCard'
+import hospitalCardInfo from './src/components/hospitalCard/info'
 export {
   first,
   second,
@@ -53,5 +54,6 @@ export {
   directionItem,
   serveCard,
   serveCardFeature,
-  hospitalCard
+  hospitalCard,
+  hospitalCardInfo
 }
