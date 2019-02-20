@@ -182,6 +182,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/hospitalCardInfo.vue'], resolve)
       }
+    },
+    {
+      path: '/signTeamCard',
+      name: '/signTeamCard',
+      component: resolve => {
+        require(['@/components/demo/signTeamCard.vue'], resolve)
+      }
     }
   ]
 })
