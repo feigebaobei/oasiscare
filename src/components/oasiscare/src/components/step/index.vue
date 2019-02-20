@@ -226,15 +226,15 @@ export default {
 
       .contTitle
         color: $greyb
-        font-size: .28rem
-        line-height: .4rem
-        font-weight: 600
+        font-size: .32rem
+        line-height: .45rem
+        font-weight: $fontWeightCommon
         margin: 0 0 $separate08 0
 
       .contSubTitle
         color: $grey9
-        font-size: .28rem
-        line-height: .4rem
+        font-size: .24rem
+        line-height: .28rem
         margin: 0
 
   .itemBox.active
@@ -242,7 +242,8 @@ export default {
     .contBox
 
       .contTitle
-        color: $grey4
+        color: $grey6
+        font-weight: $fontWeightCommon
 
   .itemBox.cur
 
@@ -257,5 +258,6 @@ export default {
       .contTitle
 
         color: $orange
+        font-weight: $fontWeightBold
 
 </style>
