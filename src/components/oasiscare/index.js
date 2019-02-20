@@ -10,6 +10,7 @@ import authentication from './src/components/authentication'
 import addressItem from './src/components/addressItem'
 import hint from './src/components/hint'
 import grade from './src/components/grade'
+import gradePercent from './src/components/grade/percent'
 import navItem from './src/components/navItem'
 import infoItem from './src/components/infoItem'
 import inputText from './src/components/formItem/inputText'
@@ -40,6 +41,7 @@ export {
   addressItem,
   hint,
   grade,
+  gradePercent,
   navItem,
   infoItem,
   imgText,

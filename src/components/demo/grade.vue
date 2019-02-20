@@ -1,5 +1,6 @@
 <template>
   <div class="grade">
+    <h2>grade</h2>
     <h2>基本样式</h2>
     <grade :value="a0.value"></grade>
     <h2>小数</h2>
@@ -18,11 +19,20 @@
     </div>
     <h2>此组件只能做为块级元素使用。原因与authentication组件一样。</h2>
     <h2>value的显示范围在0-5。</h2>
+    <h2>grade percent</h2>
+    <h2>基本样式</h2>
+    <grade-percent :percentValue="gp0.percentValue"></grade-percent>
+    <h2>控制大小</h2>
+    <grade-percent :imgArea="['.8rem', '.8rem']" :percentValue="gp0.percentValue"></grade-percent>
+    <grade-percent :imgArea="gp0.imgArea" :percentValue="gp0.percentValue"></grade-percent>
+    <h2>自定义图片</h2>
+    <grade-percent :imgUrls="gp0.imgUrls" :imgArea="gp0.imgArea" :percentValue="gp0.percentValue"></grade-percent>
   </div>
 </template>
 
 <script>
-import { grade } from '@/components/oasiscare'
+import { grade, gradePercent } from '@/components/oasiscare'
+import { icon } from '@/lib/picMap.js'
 export default {
   props: {},
   data () {
@@ -38,13 +48,19 @@ export default {
       },
       a3: {
         value: 8
+      },
+      gp0: {
+        imgUrls: [icon.logo.x1, icon.test.x1],
+        imgArea: ['1rem', '1rem'],
+        percentValue: 70
       }
     }
   },
   computed: {
   },
   components: {
-    grade
+    grade,
+    gradePercent
   },
   methods: {},
   created () {},
