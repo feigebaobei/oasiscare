@@ -135,7 +135,7 @@ export default {
   .hcText
     width: 100%
     font-size: .24rem
-    line-height: .32rem
+    line-height: .36rem
 
 .middle
   padding: .02rem .08rem
@@ -144,7 +144,7 @@ export default {
   .hcText
     width: 100%
     font-size: .2rem
-    line-height: .28rem
+    line-height: .32rem
 
 .small
 
@@ -154,6 +154,6 @@ export default {
   .hcText
     width: 100%
     font-size: .18rem
-    line-height: .24rem
+    line-height: .28rem
 
 </style>
