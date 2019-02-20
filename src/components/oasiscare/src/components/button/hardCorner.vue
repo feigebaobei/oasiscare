@@ -124,6 +124,7 @@ export default {
   text-align: center
   display: inline-flex
   box-sizing: border-box
+  font-weight: $fontWeightBold
 
 .big
 
