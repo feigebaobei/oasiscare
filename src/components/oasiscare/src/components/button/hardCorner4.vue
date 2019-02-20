@@ -1,6 +1,6 @@
 <!-- 圆角为4的硬角button -->
 <template>
-  <div class="hardCorner4" :class="[compArea]" :style="[compW, compColor, compBorder, compBdr, compBg]" @click="trigger">
+  <div class="hardCorner" :class="[compArea]" :style="[compW, compColor, compBorder, compBdr, compBg]" @click="trigger">
     <span class="hcText" v-html="text"></span>
   </div>
 </template>
@@ -116,7 +116,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../../assets/style/main.styl'
 
-.hardCorner4
+.hardCorner
   // display: flex
   // flex-direction: column
   align-items: center

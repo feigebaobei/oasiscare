@@ -22,7 +22,7 @@
 
 <script>
 import { icon } from '../../lib/picMap.js'
-import hardCorner from '../button/hardCorner4.vue'
+import hardCorner from '../button/hardCorner.vue'
 export default {
   props: {
     imgUrl: {
