@@ -4,19 +4,25 @@
       <img :src="compImgUrl" alt="" class="scImg">
     </div>
     <div class="scBox">
-      <p class="scbTitle" v-html="title"></p>
-      <p class="scbSubTitle">
-        <span class="name" v-html="name"></span>
-        <span class="hospital" v-html="hospital"></span>
-      </p>
-      <p class="subTitleBox"><span class="subTitleKey" v-html="subTitleKey"></span><span class="subTitleValue" v-html="subTitleValue"></span></p>
-      <p class="priceBox"><span class="prefix" v-html="pricePrefix"></span><span class="price" v-html="price"></span></p>
+      <div class="titleBox">
+        <p class="scbTitle" v-html="title"></p>
+        <hard-corner class="scbTagItem" v-for="(item, index) in tags" :key="index" :text="item.text" :color="item.color" :borderRadius="item.borderRadius" :bg="item.bg" :area="item.area" :eventType="item.eventType" :data="item.data"></hard-corner>
+      </div>
+      <p class="subTitle" v-html="subTitle"></p>
+      <div class="saleInfo">
+        <div class="left">
+          <p class="univalence"><span class="currency" v-html="currency"></span><span class="price" v-html="price"></span><span class="unit" v-html="unit"></span></p>
+          <del class="originPrice" v-if="hasOriginPrice" v-html="originPrice"></del>
+        </div>
+        <span class="paidNumber" v-if="hasPaidNumber" v-html="paidNumber"></span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { icon } from '../../lib/picMap.js'
+import hardCorner from '../button/hardCorner4.vue'
 export default {
   props: {
     imgUrl: {
@@ -27,23 +33,23 @@ export default {
       type: String,
       default: ''
     },
-    name: {
-      type: String,
-      default: ''
+    tags: {
+      type: Array,
+      default () {
+        return [
+          // {
+          //   text: '',
+          //   color: '#fff',
+          //   borderRadius: '0.08rem',
+          //   bg: '#ffa81a',
+          //   area: 'big',
+          //   eventType: '',
+          //   data: {}
+          // }
+        ]
+      }
     },
-    hospital: {
-      type: String,
-      default: ''
-    },
-    // subTitle: {
-    //   type: String,
-    //   default: ''
-    // },
-    subTitleKey: {
-      type: String,
-      default: ''
-    },
-    subTitleValue: {
+    currency: {
       type: String,
       default: ''
     },
@@ -51,13 +57,29 @@ export default {
       type: [String, Number],
       default: ''
     },
-    hasPricePrefix: {
+    unit: {
+      type: String,
+      default: ''
+    },
+    originPrice: {
+      type: String,
+      default: ''
+    },
+    hasOriginPrice: {
       type: Boolean,
       default: true
     },
-    pricePrefix: {
+    paidNumber: {
       type: String,
-      default: '￥'
+      default: ''
+    },
+    hasPaidNumber: {
+      type: Boolean,
+      default: true
+    },
+    subTitle: {
+      type: String,
+      default: ''
     },
     eventType: {
       type: String,
@@ -84,6 +106,7 @@ export default {
     }
   },
   components: {
+    hardCorner
   },
   methods: {
     trigger () {
@@ -109,79 +132,89 @@ export default {
   .ciImgBox
     border-radius: .16rem
     margin: 0 $separate24 0 0
-    flex-basis: 2.08rem
+    // flex-basis: 2.08rem
     flex-grow: 0
     flex-shrink: 0
+    font-size: 0
 
     .scImg
-      width: 2.08rem
-      height: 1.61rem
+      width: 1.6rem
+      height: 1.6rem
 
   .scBox
     flex-basis: 100px
-    max-width: calc( 100% - 2.32rem )
+    max-width: calc( 100% - 1.84rem )
     flex-grow: 1
     flex-shrink: 1
     display: flex
     flex-wrap: wrap
 
-    .scbTitle
-      color: $black
-      font-size: .36rem
-      line-height: .5rem
-      overflow: hidden
+    .titleBox
       margin: 0 0 $separate08 0
-      text-overflow: ellipsis
-      white-space: nowrap
+      max-width: 100%
       flex-basis: 100%
+      flex-grow: 0
+      flex-shrink: 0
+      display: flex
+      align-items: center
 
       .scbTitle
-        color: $black
+        color: $grey4
         font-size: .36rem
         line-height: .5rem
-        margin: 0 0 $separate08 0
+        margin: 0
         overflow: hidden
         text-overflow: ellipsis
         white-space: nowrap
 
-    .scbSubTitle
-      margin: 0 0 $separate08 0
-      font-size: .28rem
-      line-height: .4rem
-      flex-basis: 100%
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-
-      .name
-        font-weight: $fontWeightBold
-
-      .hospital
+      .scbTagItem
         margin: 0 0 0 $separate08
 
-    .subTitleBox
-      margin: 0
+    .subTitle
+      margin: 0 0 $separate24 0
+      flex-basis: 100%
+      flex-grow: 0
+      flex-shrink: 0
+      color: $grey4
       font-size: .28rem
       line-height: .4rem
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
+
+    .saleInfo
       flex-basis: 100%
+      flex-grow: 0
+      flex-shrink: 0
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      color: $grey9
+      font-size: .24rem
+      line-height: .33rem
+      align-items: flex-end
 
-      .subTitleKey
-        font-weight: $fontWeightBold
+      .left
+        flex-basis: 100px
+        flex-grow: 1
+        flex-shrink: 1
+        align-items: flex-end
+        display: flex
+        flex-wrap: wrap
 
-      .subTitleValue
-        font-weight: $fontWeightCommon
+        .univalence
+          margin: 0
+          color: $orange
+          font-size: .36rem
+          line-height: .44rem
 
-    .priceBox
-      color: $orange
-      font-size: .36rem
-      line-height: .44rem
-      margin: $separate24 0 0 0
-      flex-basis: 100%
+        .unit
+            color: $grey9
+            font-size: .24rem
+            line-height: .33rem
 
-      .prefix
-        font-size: .24rem
+        .originPrice
+          line-height: .33rem
+          margin: 0 0 0 $separate24
 
 </style>
