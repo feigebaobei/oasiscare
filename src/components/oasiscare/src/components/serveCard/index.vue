@@ -131,6 +131,7 @@ export default {
 
   .ciImgBox
     border-radius: .16rem
+    overflow: hidden
     margin: 0 $separate24 0 0
     // flex-basis: 2.08rem
     flex-grow: 0
