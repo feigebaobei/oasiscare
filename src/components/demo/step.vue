@@ -154,7 +154,7 @@ export default {
           }
         ],
         clickAble: true
-      },
+      }
     }
   },
   computed: {
