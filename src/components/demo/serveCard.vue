@@ -122,7 +122,7 @@ export default {
         price: '581',
         hasPricePrefix: false,
         pricePrefix: '$'
-      },
+      }
     }
   },
   computed: {
