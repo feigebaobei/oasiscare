@@ -168,6 +168,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/serveCard.vue'], resolve)
       }
+    },
+    {
+      path: '/hospitalCard',
+      name: '/hospitalCard',
+      component: resolve => {
+        require(['@/components/demo/hospitalCard.vue'], resolve)
+      }
     }
   ]
 })

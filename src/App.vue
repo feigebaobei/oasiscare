@@ -22,6 +22,7 @@
       <router-link to="/drug">drug</router-link>
       <router-link to="/directionItem">directionItem</router-link>
       <router-link to="/serveCard">serveCard</router-link>
+      <router-link to="/hospitalCard">hospitalCard</router-link>
     </nav>
     <div class="content">
       <router-view/>
