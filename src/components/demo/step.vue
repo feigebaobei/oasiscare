@@ -2,6 +2,7 @@
   <div class="basic">
     <h2>基本样式</h2>
     <step v-model="a0.value" :stepList="a0.stepList" :clickAble="a0.clickAble"></step>
+    <step v-model="a2.value" :stepList="a2.stepList" :clickAble="a2.clickAble"></step>
     <h2>自定义图片</h2>
     <step v-model="a1.value" :stepList="a1.stepList" :clickAble="a1.clickAble"></step>
     <h2>无点击事件</h2>
@@ -107,7 +108,53 @@ export default {
           }
         ],
         clickAble: true
-      }
+      },
+      a2: {
+        value: 'second',
+        stepList: [
+          {
+            title: '标题',
+            subTitle: '副标题',
+            value: 'first',
+            useImg: true,
+            imgNames: ['', ''],
+            imgUrls: ['', '']
+          },
+          {
+            title: '标题1',
+            subTitle: '副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题副标题',
+            value: 'second',
+            useImg: true,
+            imgNames: ['', ''],
+            imgUrls: ['', '']
+          },
+          {
+            title: '标题2',
+            subTitle: '副标题',
+            value: 'three',
+            useImg: true,
+            imgNames: ['', ''],
+            imgUrls: ['', '']
+          },
+          {
+            title: '标题3',
+            subTitle: '副标题',
+            value: 'four',
+            useImg: true,
+            imgNames: ['', ''],
+            imgUrls: ['', '']
+          },
+          {
+            title: '标题4',
+            subTitle: '副标题',
+            value: 'five',
+            useImg: true,
+            imgNames: ['', ''],
+            imgUrls: ['', '']
+          }
+        ],
+        clickAble: true
+      },
     }
   },
   computed: {
