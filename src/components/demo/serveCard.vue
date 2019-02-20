@@ -1,14 +1,20 @@
 <template>
   <div class="serveCard">
+    <h2>服务卡</h2>
     <h2>基本样式</h2>
-    <serve-card :imgUrl="''" :title="a0.title" :name="a0.name" :hospital="a0.hospital" :subTitleKey="a0.subTitleKey" :subTitleValue="a0.subTitleValue" :price="a0.price" :hasPricePrefix="a0.hasPricePrefix"></serve-card>
+    <serve-card></serve-card>
     <h2>极限样式</h2>
-    <serve-card :imgUrl="a1.imgUrl" :title="a1.title" :name="a1.name" :hospital="a1.hospital" :subTitleKey="a1.subTitleKey" :subTitleValue="a1.subTitleValue" :price="a1.price" :hasPricePrefix="a1.hasPricePrefix" :pricePrefix="a1.pricePrefix"></serve-card>
+    <serve-card></serve-card>
+    <h2>特色服务卡</h2>
+    <h2>基本样式</h2>
+    <serve-card-feature :imgUrl="''" :title="a0.title" :name="a0.name" :hospital="a0.hospital" :subTitleKey="a0.subTitleKey" :subTitleValue="a0.subTitleValue" :price="a0.price" :hasPricePrefix="a0.hasPricePrefix"></serve-card-feature>
+    <h2>极限样式</h2>
+    <serve-card-feature :imgUrl="a1.imgUrl" :title="a1.title" :name="a1.name" :hospital="a1.hospital" :subTitleKey="a1.subTitleKey" :subTitleValue="a1.subTitleValue" :price="a1.price" :hasPricePrefix="a1.hasPricePrefix" :pricePrefix="a1.pricePrefix"></serve-card-feature>
   </div>
 </template>
 
 <script>
-import {serveCard} from '@/components/oasiscare'
+import {serveCard, serveCardFeature} from '@/components/oasiscare'
 import { icon } from '@/lib/picMap.js'
 export default {
   props: {},
@@ -41,7 +47,8 @@ export default {
   computed: {
   },
   components: {
-    serveCard
+    serveCard,
+    serveCardFeature
   },
   methods: {},
   created () {},

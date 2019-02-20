@@ -24,6 +24,7 @@ import orderInfoItem from './src/components/orderInfoItem'
 import drug from './src/components/drug'
 import directionItem from './src/components/directionItem'
 import serveCard from './src/components/serveCard'
+import serveCardFeature from './src/components/serveCard/feature'
 export {
   first,
   second,
@@ -49,5 +50,6 @@ export {
   orderInfoItem,
   drug,
   directionItem,
-  serveCard
+  serveCard,
+  serveCardFeature
 }
