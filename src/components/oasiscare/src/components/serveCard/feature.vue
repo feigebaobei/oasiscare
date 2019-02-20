@@ -1,5 +1,5 @@
 <template>
-  <div class="serveCard" @click="trigger">
+  <div class="feature" @click="trigger">
     <div class="ciImgBox">
       <img :src="compImgUrl" alt="" class="scImg">
     </div>
@@ -57,7 +57,7 @@ export default {
     },
     pricePrefix: {
       type: String,
-      default: '￥'
+      default: ''
     },
     eventType: {
       type: String,
@@ -100,7 +100,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../../assets/style/main.styl'
 
-.serveCard
+.feature
   padding: $paddingTop $paddingRight $paddingBottom $paddingLeft
   background-color: $white
   display: flex
@@ -112,10 +112,11 @@ export default {
     flex-basis: 2.08rem
     flex-grow: 0
     flex-shrink: 0
+    font-size: 0
 
     .scImg
       width: 2.08rem
-      height: 1.61rem
+      height: 1.6rem
 
   .scBox
     flex-basis: 100px
