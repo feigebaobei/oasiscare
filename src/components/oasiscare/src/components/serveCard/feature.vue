@@ -136,6 +136,7 @@ export default {
       text-overflow: ellipsis
       white-space: nowrap
       flex-basis: 100%
+      font-weight: $fontWeightBold
 
       .scbTitle
         color: $black

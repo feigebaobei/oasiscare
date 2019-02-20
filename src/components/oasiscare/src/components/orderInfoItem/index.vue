@@ -171,7 +171,7 @@ export default {
           line-height: .28rem
 
     .oiRangeBox
-      margin: 0
+      margin: $separate08 0 0 0
       color: $grey9
       font-size: .24rem
       line-height: .33rem

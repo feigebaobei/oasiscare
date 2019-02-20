@@ -111,6 +111,7 @@ export default {
     margin: 0 $separate24 0 0
     flex-grow: 0
     flex-shrink: 0
+    color: $black
 
   .diContBox
     flex-basis: 100px

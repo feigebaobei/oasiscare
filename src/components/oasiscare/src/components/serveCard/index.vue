@@ -162,6 +162,7 @@ export default {
       .scbTitle
         color: $grey4
         font-size: .36rem
+        font-weight: $fontWeightBold
         line-height: .5rem
         margin: 0
         overflow: hidden
@@ -208,11 +209,13 @@ export default {
           color: $orange
           font-size: .36rem
           line-height: .44rem
+          font-weight: $fontWeightBold
 
         .unit
-            color: $grey9
-            font-size: .24rem
-            line-height: .33rem
+          color: $grey9
+          font-size: .24rem
+          line-height: .33rem
+          font-weight: $fontWeightCommon
 
         .originPrice
           line-height: .33rem
