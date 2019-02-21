@@ -118,6 +118,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../assets/style/main.styl'
 
 .percent
   display: flex
@@ -132,5 +133,6 @@ export default {
     color: $grey6
     font-size: .28rem
     line-height: .33rem
+    margin: 0 0 0 $separate08
 
 </style>
