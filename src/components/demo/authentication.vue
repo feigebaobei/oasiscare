@@ -29,8 +29,7 @@
 </template>
 
 <script>
-import { authentication } from '@/components/oasiscare'
-import { authenMedicine } from '@/components/oasiscare'
+import { authentication, authenMedicine } from '@/components/oasiscare'
 export default {
   props: {},
   data () {

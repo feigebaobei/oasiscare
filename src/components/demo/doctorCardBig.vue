@@ -47,7 +47,7 @@ export default {
             borderRadius: '.08rem',
             bg: '#ff961d'
           }
-        ],
+        ]
       },
       a1: {
         imgUrl: icon.test.x1,
@@ -118,7 +118,7 @@ export default {
             borderRadius: '.08rem',
             bg: '#ff961d'
           }
-        ],
+        ]
       }
     }
   },

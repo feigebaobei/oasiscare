@@ -18,7 +18,7 @@
         <span class="goodAtValue" v-html="goodAtValue"></span>
       </p>
       <div class="data">
-        <div class="dataItem" v-for="(item, index) in dataItems">
+        <div class="dataItem" v-for="(item, index) in dataItems" :key="index">
           <span class="itemKey" v-html="item.key"></span>
           <grade-percent :style="[mMarginRight(index)]" :percentValue="item.value"></grade-percent>
         </div>
@@ -121,10 +121,7 @@ export default {
       }
       let m = Math.floor(box / 5)
       return arr[m]
-    },
-    // mMarginRight () {
-    //   if 
-    // }
+    }
   },
   components: {
     hardCorner,
