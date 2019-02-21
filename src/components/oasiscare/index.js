@@ -19,6 +19,7 @@ import inputRadio from './src/components/formItem/inputRadio'
 // import inputCheckbox from './src/components/formItem/inputCheckbox'
 import imgText from './src/components/common/imgText'
 import label from './src/components/common/label'
+import infoBlock from './src/components/common/infoBlock'
 import hardCorner from './src/components/button/hardCorner'
 import softCorner from './src/components/button/softCorner'
 import step from './src/components/step'
@@ -32,6 +33,7 @@ import hospitalCardInfo from './src/components/hospitalCard/info'
 import signTeamCard from './src/components/signTeamCard'
 import doctorCardBig from './src/components/doctorCard/big'
 import doctorCardSmall from './src/components/doctorCard/small'
+import doctorCardInfo from './src/components/doctorCard/info'
 export {
   first,
   second,
@@ -50,6 +52,7 @@ export {
   infoItem,
   imgText,
   label,
+  infoBlock,
   inputText,
   inputRadio,
   // inputCheckbox
@@ -65,5 +68,6 @@ export {
   hospitalCardInfo,
   signTeamCard,
   doctorCardBig,
-  doctorCardSmall
+  doctorCardSmall,
+  doctorCardInfo
 }
