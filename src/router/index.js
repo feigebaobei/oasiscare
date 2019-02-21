@@ -196,6 +196,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/doctorCardBig.vue'], resolve)
       }
+    },
+    {
+      path: '/doctorCardSmall',
+      name: '/doctorCardSmall',
+      component: resolve => {
+        require(['@/components/demo/doctorCardSmall.vue'], resolve)
+      }
     }
   ]
 })
