@@ -36,7 +36,6 @@ export default {
   display: flex
   flex-wrap: wrap
   background-color: $white
-  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft
   align-items: center
   position: relative
 
