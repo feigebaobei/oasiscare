@@ -1,10 +1,12 @@
 <template>
   <div class="basic">
-    <h2>basic</h2>
+    <h2>基本样式</h2>
+    <basicvue></basicvue>
   </div>
 </template>
 
 <script>
+import { basicvue } from '@/components/oasiscare'
 export default {
   props: {},
   data () {
@@ -14,6 +16,7 @@ export default {
   computed: {
   },
   components: {
+    basicvue
   },
   methods: {},
   created () {},
