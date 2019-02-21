@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import { icon } from '../../lib/picMap.js'
-import hardCorner from '../button/hardCorner.vue'
 export default {
   props: {
     text: {
