@@ -197,6 +197,16 @@ const icon = {
     x2: require('../assets/imgs/timeIcon2x.png'),
     x3: require('../assets/imgs/timeIcon3x.png')
   },
+  degreeGrey: {
+    x1: require('../assets/imgs/degreeGrey1x.png'),
+    x2: require('../assets/imgs/degreeGrey2x.png'),
+    x3: require('../assets/imgs/degreeGrey3x.png')
+  },
+  heartGrey: {
+    x1: require('../assets/imgs/heartGrey1x.png'),
+    x2: require('../assets/imgs/heartGrey2x.png'),
+    x3: require('../assets/imgs/heartGrey3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),

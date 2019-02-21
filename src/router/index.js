@@ -203,6 +203,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/doctorCardSmall.vue'], resolve)
       }
+    },
+    {
+      path: '/doctorCardInfo',
+      name: '/doctorCardInfo',
+      component: resolve => {
+        require(['@/components/demo/doctorCardInfo.vue'], resolve)
+      }
     }
   ]
 })

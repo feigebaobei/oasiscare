@@ -12,11 +12,24 @@
       <label-vue :keyItem="dataLabel0.keyItem" :keyAlign="'space-between'"></label-vue>
       <label-vue :keyItem="dataLabel0.keyItem" :isBold="dataLabel0.isBold"></label-vue>
     </div>
+    <h2>infoBlock</h2>
+    <info-block :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+    <h2>几个在一起</h2>
+    <div class="infoBlockbox">
+      <info-block :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+      <info-block :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+      <info-block :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+    </div>
+    <div class="infoBlockbox2">
+      <info-block class="infoBlockItem" :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+      <info-block class="infoBlockItem" :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+      <info-block class="infoBlockItem" :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
+    </div>
   </div>
 </template>
 
 <script>
-import { imgText, label } from '@/components/oasiscare'
+import { imgText, label, infoBlock } from '@/components/oasiscare'
 import { icon } from '@/lib/picMap.js'
 export default {
   props: {},
@@ -42,7 +55,8 @@ export default {
   },
   components: {
     imgText,
-    labelVue: label
+    labelVue: label,
+    infoBlock
   },
   methods: {},
   created () {},
@@ -59,5 +73,16 @@ export default {
 
     .labelBox
       font-size: .28rem
+
+    .infoBlockbox
+    .infoBlockbox2
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+
+      .infoBlockItem
+        flex-basis: 100px
+        flex-grow: 1
+        flex-shrink: 1
 
 </style>

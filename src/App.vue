@@ -27,6 +27,7 @@
       <router-link to="/signTeamCard">signTeamCard</router-link>
       <router-link to="/doctorCardBig">doctorCardBig</router-link>
       <router-link to="/doctorCardSmall">doctorCardSmall</router-link>
+      <router-link to="/doctorCardInfo">doctorCardInfo</router-link>
     </nav>
     <div class="content">
       <router-view/>
