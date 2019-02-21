@@ -29,6 +29,7 @@ import serveCardFeature from './src/components/serveCard/feature'
 import hospitalCard from './src/components/hospitalCard'
 import hospitalCardInfo from './src/components/hospitalCard/info'
 import signTeamCard from './src/components/signTeamCard'
+import doctorCardBig from './src/components/doctorCard/big'
 export {
   first,
   second,
@@ -59,5 +60,6 @@ export {
   serveCardFeature,
   hospitalCard,
   hospitalCardInfo,
-  signTeamCard
+  signTeamCard,
+  doctorCardBig
 }

@@ -189,6 +189,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/signTeamCard.vue'], resolve)
       }
+    },
+    {
+      path: '/doctorCardBig',
+      name: '/doctorCardBig',
+      component: resolve => {
+        require(['@/components/demo/doctorCardBig.vue'], resolve)
+      }
     }
   ]
 })
