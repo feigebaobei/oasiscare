@@ -35,6 +35,7 @@
 import { icon } from '../../lib/picMap.js'
 import hardCorner from '../button/hardCorner.vue'
 import gradePercent from '../grade/percent.vue'
+import { workTime } from '../../data/index.js'
 export default {
   props: {
     imgUrl: {
@@ -112,15 +113,13 @@ export default {
       }
     },
     compWorkTime () {
-      // console.log(2)
-      let arr = ['5年以内', '10年以上', '15年以上', '20年以上', '25年以上', '30年以上']
       let box = parseInt(Number(this.workTime))
       box--
       if (box < 0) {
         box = 0
       }
       let m = Math.floor(box / 5)
-      return arr[m]
+      return workTime[m]
     }
   },
   components: {
