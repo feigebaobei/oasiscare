@@ -1,5 +1,6 @@
 <template>
   <div class="authentication">
+    <h2>authentication</h2>
     <h2>默认值</h2>
     <!-- <div class="inline"> -->
       <authentication></authentication>
@@ -19,11 +20,17 @@
     </div>
     <h2>提示: 因为这个组件内部都是行内元素。所以这个组件必须做成块级元素。若不做为块级元素会受到父元素的字号样式影响。</h2>
     <h2>因此该组件只能做为块级元素使用</h2>
+    <h2>authenMedicine</h2>
+    <h2>默认值</h2>
+    <authen-medicine></authen-medicine>
+    <h2>自定义值</h2>
+    <authen-medicine :text="a0.text"></authen-medicine>
   </div>
 </template>
 
 <script>
 import { authentication } from '@/components/oasiscare'
+import { authenMedicine } from '@/components/oasiscare'
 export default {
   props: {},
   data () {
@@ -42,7 +49,8 @@ export default {
   computed: {
   },
   components: {
-    authentication
+    authentication,
+    authenMedicine
   },
   methods: {},
   created () {},

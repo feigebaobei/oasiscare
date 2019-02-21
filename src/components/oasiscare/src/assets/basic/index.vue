@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { icon } from '../../lib/picMap.js'
+import hardCorner from '../button/hardCorner.vue'
 export default {
   props: {},
   data () {
@@ -22,5 +24,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// .basic
+@import '../../assets/style/main.styl'
+
+.basic
+  display: flex
+  flex-wrap: wrap
+  background-color: $white
+  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft
+
 </style>

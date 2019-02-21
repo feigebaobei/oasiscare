@@ -7,6 +7,7 @@ import addressPhone from './src/components/addressPhone'
 import orderStatus from './src/components/orderStatus'
 import addressCard from './src/components/addressCard'
 import authentication from './src/components/authentication'
+import authenMedicine from './src/components/authentication/medicine'
 import addressItem from './src/components/addressItem'
 import hint from './src/components/hint'
 import grade from './src/components/grade'
@@ -39,6 +40,7 @@ export {
   orderStatus,
   addressCard,
   authentication,
+  authenMedicine,
   addressItem,
   hint,
   grade,
