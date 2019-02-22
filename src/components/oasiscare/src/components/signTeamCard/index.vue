@@ -157,7 +157,8 @@ export default {
     .title
       color: $black
       font-size: .36rem
-      font-weight: .5rem
+      line-height: .45rem
+      font-weight: $fontWeightBold
       flex-basis: 100%
       margin: 0 0 $separate08 0
       overflow: hidden
@@ -171,6 +172,7 @@ export default {
       white-space: nowrap
       font-size: .28rem
       line-height: .4rem
+      color: $grey4
 
       .subTitleKey
         font-weight: $fontWeightBold

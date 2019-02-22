@@ -79,6 +79,7 @@ export default {
       margin: 0 .04rem 0 0
 
     .value
+      font-size: .32rem
       font-weight: $fontWeightBold
 
   .title

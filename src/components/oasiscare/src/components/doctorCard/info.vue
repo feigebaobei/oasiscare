@@ -153,6 +153,7 @@ export default {
         margin: 0 0 0 $separate16
 
       .post
+        color: $grey9
         margin: 0 0 0 $separate08
         font-size: .24rem
         line-height: .33rem

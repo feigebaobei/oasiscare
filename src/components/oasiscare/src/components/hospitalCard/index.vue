@@ -82,7 +82,7 @@ export default {
         bg: '#87cd72'
       },
       tag: {
-        color: '#d8d8d8',
+        color: '#9b9b9b',
         border: '.02rem solid #d8d8d8',
         borderRadius: '.08rem'
       }
@@ -190,7 +190,7 @@ export default {
       font-size: 0
 
       .tagItem
-        margin-bottom: .2rem
+        margin-bottom: $separate16
 
       .tagItemNoLast
         margin-right: .08rem
