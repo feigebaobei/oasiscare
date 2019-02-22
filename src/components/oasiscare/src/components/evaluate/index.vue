@@ -134,7 +134,7 @@ export default {
 
   .eCont
     color: $grey4
-    font-size: .24rem
-    line-height: .33rem
+    font-size: .28rem
+    line-height: .4rem
 
 </style>

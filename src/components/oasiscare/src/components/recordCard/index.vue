@@ -245,6 +245,7 @@ export default {
           font-weight: $fontWeightBold
 
         .post
+          color: $grey6
           margin: 0 0 0 $separate08
 
         .workTime

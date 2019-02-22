@@ -17,7 +17,7 @@
             <!-- <p v-html="confirmCont"></p> -->
           </div>
           <div class="confirmF">
-            <div class="confirmCancel" v-if="hasCancelBt" v-html="cancelText" @click.stop="cancel">cancel</div>
+            <span class="confirmCancel" v-if="hasCancelBt" v-html="cancelText" @click.stop="cancel">cancel</span>
             <div class="separate"></div>
             <div class="confirmOk" v-if="hasOkBt" v-html="okText" @click.stop="ok">ok</div>
           </div>
@@ -205,16 +205,15 @@ export default {
       .confirmF
         text-align: center
         display: flex
-        padding: .08rem 0 .16rem 0
+        padding: .2rem 0
         font-size: .36rem
-        font-weight: 600
+        font-weight: $fontWeightBold
         line-height: .5rem
 
         .confirmCancel
           box-sizing: border-box
           flex-basis: 50%
           color: $grey9
-          font-weight: 400
           flex-grow: 1
           flex-shrink: 1
 
@@ -228,7 +227,6 @@ export default {
           box-sizing: border-box
           flex-basis: 50%
           color: $orange
-          font-weight: 400
           flex-grow: 1
           flex-shrink: 1
 

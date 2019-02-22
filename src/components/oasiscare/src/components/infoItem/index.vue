@@ -106,6 +106,7 @@ export default {
 
   .valueBox
     display: flex
+    color: $grey4
 
     .valueSpan
       font-size: .28rem

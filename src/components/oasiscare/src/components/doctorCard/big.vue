@@ -1,5 +1,5 @@
 <template>
-  <div class="big">
+  <div class="doctorCardBig">
     <div class="imgBox">
       <img :src="compImgUrl" alt="" class="img">
     </div>
@@ -143,7 +143,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../../assets/style/main.styl'
 
-.big
+.doctorCardBig
   display: flex
   flex-wrap: wrap
   background-color: $white
@@ -199,6 +199,7 @@ export default {
         margin: 0 0 0 $separate08
 
     .second
+      color: $black
       flex-basis: 100%
       flex-grow: 0
       flex-shrink: 0
@@ -207,12 +208,15 @@ export default {
       font-size: .32rem
       font-weight: $fontWeightBold
       line-height: .45rem
-      margin: 0 0 .32rem 0
+      margin: 0 0 .14rem 0
+      padding: 0 0 $separate16 0
+      border-bottom: .01rem solid $greyf
 
       .subject
         margin: 0 0 0 $separate16
 
     .goodAt
+      color: $grey6
       flex-basis: 100%
       flex-grow: 0
       flex-shrink: 0
