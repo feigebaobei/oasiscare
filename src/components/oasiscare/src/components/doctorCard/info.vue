@@ -48,8 +48,8 @@ export default {
       default: ''
     },
     hasSubject: {
-      type: String,
-      default: ''
+      type: Boolean,
+      default: true
     },
     subject: {
       type: String,

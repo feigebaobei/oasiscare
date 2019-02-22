@@ -39,7 +39,7 @@ export default {
             valueColor: '#4ca866',
             title: '疗效'
           }
-        ],
+        ]
       }
     }
   },

@@ -65,7 +65,6 @@ export default {
         box = 0
       }
       let m = Math.floor(box / 5)
-      console.log(m)
       return workTime[m]
     }
   },
