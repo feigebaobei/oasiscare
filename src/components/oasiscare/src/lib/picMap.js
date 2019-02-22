@@ -207,6 +207,11 @@ const icon = {
     x2: require('../assets/imgs/heartGrey2x.png'),
     x3: require('../assets/imgs/heartGrey3x.png')
   },
+  caseHistoryUp: {
+    x1: require('../assets/imgs/caseHistoryUp1x.png'),
+    x2: require('../assets/imgs/caseHistoryUp2x.png'),
+    x3: require('../assets/imgs/caseHistoryUp3x.png')
+  },
   default: {
     x1: require('../assets/imgs/default1x.png'),
     x2: require('../assets/imgs/default1x.png'),

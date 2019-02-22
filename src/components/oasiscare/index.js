@@ -34,6 +34,7 @@ import signTeamCard from './src/components/signTeamCard'
 import doctorCardBig from './src/components/doctorCard/big'
 import doctorCardSmall from './src/components/doctorCard/small'
 import doctorCardInfo from './src/components/doctorCard/info'
+import recordCard from './src/components/recordCard'
 export {
   first,
   second,
@@ -69,5 +70,6 @@ export {
   signTeamCard,
   doctorCardBig,
   doctorCardSmall,
-  doctorCardInfo
+  doctorCardInfo,
+  recordCard
 }

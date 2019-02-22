@@ -96,6 +96,7 @@ export default {
     span
       display: inline-block
       font-size: .28rem
+      line-height: .4rem
 
   .space-around
     justify-content: space-around
@@ -108,6 +109,7 @@ export default {
 
     .valueSpan
       font-size: .28rem
+      line-height: .4rem
       color: $grey6
       flex-grow: 1
       flex-shrink: 1
