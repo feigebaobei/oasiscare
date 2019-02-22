@@ -1,6 +1,6 @@
 {
   "name": "oasiscare",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "oasis（泓华）的公共组件库",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/feigebaobei/oasiscare/issues"
   },
-  "homepage": "https://github.com/feigebaobei/oasiscare#readme"
+  "homepage": "https://github.com/feigebaobei/oasiscare#readme",
+  "dependencies": {
+    "vue-multline": "^1.0.3"
+  }
 }

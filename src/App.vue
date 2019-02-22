@@ -29,6 +29,7 @@
       <router-link to="/doctorCardSmall">doctorCardSmall</router-link>
       <router-link to="/doctorCardInfo">doctorCardInfo</router-link>
       <router-link to="recordCard">recordCard</router-link>
+      <router-link to="evaluate">evaluate</router-link>
     </nav>
     <div class="content">
       <router-view/>

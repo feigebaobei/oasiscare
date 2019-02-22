@@ -35,6 +35,7 @@ import doctorCardBig from './src/components/doctorCard/big'
 import doctorCardSmall from './src/components/doctorCard/small'
 import doctorCardInfo from './src/components/doctorCard/info'
 import recordCard from './src/components/recordCard'
+import evaluate from './src/components/evaluate'
 export {
   first,
   second,
@@ -71,5 +72,6 @@ export {
   doctorCardBig,
   doctorCardSmall,
   doctorCardInfo,
-  recordCard
+  recordCard,
+  evaluate
 }

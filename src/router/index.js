@@ -217,6 +217,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/recordCard.vue'], resolve)
       }
+    },
+    {
+      path: '/evaluate',
+      name: '/evaluate',
+      component: resolve => {
+        require(['@/components/demo/evaluate.vue'], resolve)
+      }
     }
   ]
 })
