@@ -36,6 +36,7 @@ import doctorCardSmall from './src/components/doctorCard/small'
 import doctorCardInfo from './src/components/doctorCard/info'
 import recordCard from './src/components/recordCard'
 import evaluate from './src/components/evaluate'
+import confirm from './src/components/confirm'
 export {
   first,
   second,
@@ -73,5 +74,6 @@ export {
   doctorCardSmall,
   doctorCardInfo,
   recordCard,
-  evaluate
+  evaluate,
+  confirm
 }

@@ -224,6 +224,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/evaluate.vue'], resolve)
       }
+    },
+    {
+      path: '/confirm',
+      name: '/confirm',
+      component: resolve => {
+        require(['@/components/demo/confirm.vue'], resolve)
+      }
     }
   ]
 })
