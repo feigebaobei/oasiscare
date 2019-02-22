@@ -35,7 +35,6 @@ export default {
 .medicine
   display: flex
   flex-wrap: wrap
-  background-color: $white
   align-items: center
   position: relative
 
