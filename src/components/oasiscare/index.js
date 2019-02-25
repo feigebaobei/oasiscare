@@ -37,6 +37,7 @@ import doctorCardInfo from './src/components/doctorCard/info'
 import recordCard from './src/components/recordCard'
 import evaluate from './src/components/evaluate'
 import confirm from './src/components/confirm'
+import tabBarTime from './src/components/tabBarTime'
 export {
   first,
   second,
@@ -75,5 +76,6 @@ export {
   doctorCardInfo,
   recordCard,
   evaluate,
-  confirm
+  confirm,
+  tabBarTime
 }

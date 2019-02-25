@@ -231,6 +231,13 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/confirm.vue'], resolve)
       }
+    },
+    {
+      path: '/tabBarTime',
+      name: '/tabBarTime',
+      component: resolve => {
+        require(['@/components/demo/tabBarTime.vue'], resolve)
+      }
     }
   ]
 })
