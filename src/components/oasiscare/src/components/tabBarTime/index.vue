@@ -23,7 +23,7 @@ export default {
     value: { // 若使用字符串必须使用yyyy-mm-dd格式
       type: [Date, String],
       // type: Date,
-      defautl: null,
+      defautl: '*',
       validator: function (value) {
         let isDate = value instanceof Date
         if (isDate) {
@@ -44,20 +44,14 @@ export default {
       default: false
     },
     timeStart: {
-      type: [Date, String], // 日期不全时（年月日）默认当年当月当日
-      defautl: new Date(), // yyyy-mm-dd
-      validator (value) {
-        return value instanceof Date || typeof value === 'string'
-      }
+      type: Date
+      // defautl: new Date()
     },
     timeEnd: {
-      type: [Date, String],
-      default: '',
-      validator (value) {
-        return value instanceof Date || typeof value === 'string'
-      }
+      type: Date
+      // default: new Date()
     },
-    timeSeparate: { // 用于从字符串中取时间也用于显示时间。所以必须存在。
+    timeSeparate: { // 用于显示时间(副标题)。所以必须存在。
       type: String,
       default: '-',
       require: true
@@ -82,31 +76,15 @@ export default {
     eventTypeItem: {
       type: String,
       default: ''
-    },
-    dataItem: {
-      default () {
-        return {}
-      }
     }
-    // dataItems: {
-    //   type: Array,
+    // dataItem: { //
     //   default () {
-    //     return [
-    //       // {
-    //       //   weekText: 'weekText',
-    //       //   yearText: 'yearText',
-    //       //   dayText: 'dayText',
-    //       //   monthText: 'monthText',
-    //       //   value: '',
-    //       //   isActive: false
-    //       // }
-    //     ]
+    //     return {}
     //   }
-    // },
+    // }
   },
   data () {
     return {
-      // dataValue: null,
       dataValue: this.value,
       dataDataItems: [],
       dataItems: [],
@@ -118,13 +96,15 @@ export default {
   },
   watch: {
     value: function (newValue) {
-      // this.checkValue()
       this.dataValue = newValue
     },
     timeStart: function () {
       this.createTimeData()
     },
     timeEnd: function () {
+      this.createTimeData()
+    },
+    timeStep: function () {
       this.createTimeData()
     }
   },
@@ -164,26 +144,9 @@ export default {
   },
   methods: {
     createTimeData () {
-      // timeStart\timeEnd > timeStep
       if (this.timeStart && this.timeEnd) {
-        let tempDate = new Date()
-        if (this.isDate(this.timeStart)) {
-          this.dataTimeStart = this.timeStart
-        } else {
-          let arr = this.timeStart.split(this.timeSeparate)
-          arr.reverse()
-          this.dataTimeStart = new Date(arr[2] || new Date().getFullYear(), arr[1] - 1 || new Date().getMonth(), arr[0] || new Date().getDate())
-        }
-        if (this.isDate(this.timeEnd)) {
-          this.dataTimeEnd = this.timeEnd
-        } else {
-          if (this.timeEnd === '') {
-            return 
-          }
-          let arr = this.timeEnd.split(this.timeSeparate)
-          arr.reverse()
-          this.dataTimeEnd = new Date(arr[2] || new Date().getFullYear(), arr[1] - 1 || new Date().getMonth(), arr[0] || new Date().getDate())
-        }
+        this.dataTimeStart = this.timeStart
+        this.dataTimeEnd = this.timeEnd
         this.dataTimeStep = (this.dataTimeEnd - this.dataTimeStart) / (1000 * 60 * 60 * 24)
         for (let i = 0; i < this.dataTimeStep; i++) {
           this.dataItems.push(
@@ -191,39 +154,38 @@ export default {
           )
         }
       }
-      if (this.timeStart && this.timeStep) {
-
-      }
+       // else {
+        if (this.timeStart && this.timeStep) {
+          this.dataTimeStart = this.timeStart
+          this.dataTimeStep = this.timeStep
+          for (let i = 0; i < this.dataTimeStep; i++) {
+            this.dataItems.push(
+              this.laterDate(this.dataTimeStart, i),
+            )
+          }
+        }
+         // else {
+          if (this.timeEnd && this.timeStep) {
+            this.dataTimeEnd = this.timeEnd
+            this.dataTimeStep = this.timeStep
+            // this.dataTimeStart = new Date(this.timeEnd - this.timeStep)
+            this.dataTimeStart = this.dataTimeEnd
+            this.dataTimeStart.setDate(this.dataTimeEnd.getDate() - this.timeStep)
+            for (let i = 0; i < this.dataTimeStep; i++) {
+              this.dataItems.push(
+                this.laterDate(this.dataTimeStart, i),
+              )
+            }
+          }
+        // }
+      // }
     },
-    // opDateFormat () {
-    //   let str = this.data
-    // },
     // 检验数据类型
     isDate (value) {
-      // console.log(typeof value)
-      // return typeof value
       return value instanceof Date
     },
     laterDate (d, n) {
       return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n)
-    },
-    checkValue () {
-      let obj = {}
-      for ( let i = 0, iLen = this.dataItems.length; i < iLen; i++) {
-        if (this.dataItems[i].value === this.value) {
-          obj = this.dataItems[i]
-          break
-        }
-      }
-      if (obj.value) {
-        this.dataValue = obj.value
-      } else {
-        if (this.value === '*') {
-          this.dataValue = '*'
-        } else {
-          this.dataValue = null
-        }
-      }
     },
     mWeek (data) {
       return getChinaWeek(data)
@@ -245,7 +207,7 @@ export default {
       } else {
         d = data.getDate()
       }
-      return `${m}-${d}`
+      return `${m}${this.timeSeparate}${d}`
     },
     mValue (data) {
       // 若使用日期是否相等判断有会很大误差。所以使用y/m/d是否相等判断
@@ -263,8 +225,7 @@ export default {
         }
         return objData.y === objValue.y && objData.m === objValue.m && objData.d === objValue.d
       } else {
-        let arr = this.value.split('-')
-        return objData.y === arr[0] * 1 && objData.m === arr[1] * 1 - 1 && objData.d === arr[2] * 1
+        return false
       }
     },
     triggerAll () {
@@ -274,17 +235,16 @@ export default {
       }
     },
     triggerItem (data) {
+      // 点击时返回当前item上的时间
       this.$emit('input', data)
       if (this.eventTypeItem) {
-        this.$emit(this.eventTypeItem, this.dataItem)
+        this.$emit(this.eventTypeItem, data)
       }
     }
   },
   created () {},
   mounted () {
     this.createTimeData()
-    // this.checkValue()
-    // this.opDateFormat()
   }
 }
 </script>
