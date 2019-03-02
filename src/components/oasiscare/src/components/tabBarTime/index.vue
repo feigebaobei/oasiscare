@@ -144,7 +144,7 @@ export default {
   },
   methods: {
     createTimeData () {
-      if (this.timeStart && this.timeEnd) {
+      if (!!this.timeStart && !!this.timeEnd) {
         this.dataTimeStart = this.timeStart
         this.dataTimeEnd = this.timeEnd
         this.dataTimeStep = (this.dataTimeEnd - this.dataTimeStart) / (1000 * 60 * 60 * 24)
@@ -153,32 +153,30 @@ export default {
             this.laterDate(this.dataTimeStart, i),
           )
         }
+        return
       }
-       // else {
-        if (this.timeStart && this.timeStep) {
-          this.dataTimeStart = this.timeStart
-          this.dataTimeStep = this.timeStep
-          for (let i = 0; i < this.dataTimeStep; i++) {
-            this.dataItems.push(
-              this.laterDate(this.dataTimeStart, i),
-            )
-          }
+      if (!!this.timeStart && !!this.timeStep) {
+        this.dataTimeStart = this.timeStart
+        this.dataTimeStep = this.timeStep
+        for (let i = 0; i < this.dataTimeStep; i++) {
+          this.dataItems.push(
+            this.laterDate(this.dataTimeStart, i),
+          )
         }
-         // else {
-          if (this.timeEnd && this.timeStep) {
-            this.dataTimeEnd = this.timeEnd
-            this.dataTimeStep = this.timeStep
-            // this.dataTimeStart = new Date(this.timeEnd - this.timeStep)
-            this.dataTimeStart = this.dataTimeEnd
-            this.dataTimeStart.setDate(this.dataTimeEnd.getDate() - this.timeStep)
-            for (let i = 0; i < this.dataTimeStep; i++) {
-              this.dataItems.push(
-                this.laterDate(this.dataTimeStart, i),
-              )
-            }
-          }
-        // }
-      // }
+        return
+      }
+      if (!!this.timeEnd && !!this.timeStep) {
+        this.dataTimeEnd = this.timeEnd
+        this.dataTimeStep = this.timeStep
+        this.dataTimeStart = this.dataTimeEnd
+        this.dataTimeStart.setDate(this.dataTimeEnd.getDate() - this.timeStep)
+        for (let i = 0; i < this.dataTimeStep; i++) {
+          this.dataItems.push(
+            this.laterDate(this.dataTimeStart, i),
+          )
+        }
+        return
+      }
     },
     // 检验数据类型
     isDate (value) {

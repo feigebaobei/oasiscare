@@ -3,7 +3,6 @@
     <h2>基本样式</h2>
     <tab-bar-time v-model="a0.value" :timeStart="a0.timeStart" :timeEnd="a0.timeEnd"></tab-bar-time>
     <h2>有全部bt</h2>
-    <tab-bar-time v-model="a1.value" :hasAll="a1.hasAll" :timeStart="a1.timeStart" :timeEnd="a1.timeEnd"></tab-bar-time>
     <h2>设置timeStart/timeEnd</h2>
     <tab-bar-time v-model="a1.value" :hasAll="a1.hasAll" :timeStart="a1.timeStart" :timeEnd="a1.timeEnd"></tab-bar-time>
     <h2>设置timeStart/timeStep</h2>
@@ -23,6 +22,7 @@ export default {
   props: {},
   data () {
     return {
+      date: new Date(),
       a0: {
         // value: '2019-02-27',
         value: new Date(2019, 1, 28),
@@ -30,11 +30,10 @@ export default {
         timeEnd: new Date(2019, 2, 5)
       },
       a1: {
-        // value: '2019-02-27',
         value: new Date(2019, 1, 27),
         hasAll: true,
         timeStart: new Date(2019, 1, 25),
-        timeEnd: new Date(2019, 2, 5)
+        timeEnd: new Date(2019, 1, 28)
       },
       a2: {
         // value: '2019-02-27',
