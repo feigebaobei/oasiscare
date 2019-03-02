@@ -219,10 +219,10 @@ export default new Router({
       }
     },
     {
-      path: '/evaluate',
-      name: '/evaluate',
+      path: '/evaluationCard',
+      name: '/evaluationCard',
       component: resolve => {
-        require(['@/components/demo/evaluate.vue'], resolve)
+        require(['@/components/demo/evaluationCard.vue'], resolve)
       }
     },
     {
