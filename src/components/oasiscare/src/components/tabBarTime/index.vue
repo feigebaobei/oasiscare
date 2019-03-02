@@ -1,13 +1,13 @@
 <template>
   <div class="tabBarTime" :style="[compHeight]">
-    <div class="allBox" :class="[{active: activeValue === '*'}]" v-if="hasAll" @click="triggerAll">
+    <div class="allBox" :class="[{active: dataValue === '*'}]" v-if="hasAll" @click="triggerAll">
       <span>全部</span>
     </div>
     <div class="box" :style="[compScrollWidth]">
       <div class="shelterLeft" v-if="hasAll">&nbsp;</div>
       <div class="scrollBox">
         <div class="item" v-for="(item, index) in dataItems" :key="index" @click="triggerItem(item)">
-          <item-time :weekText="item.weekText" :dayText="item.value" :isActive="item.value === activeValue"></item-time>
+          <item-time :weekText="mWeek(item)" :dayText="mDay(item)" :isActive="mValue(item)"></item-time>
         </div>
       </div>
       <div class="shelterRight"></div>
@@ -17,11 +17,23 @@
 
 <script>
 import itemTime from './itemTime.vue'
+import { getChinaWeek } from '../../lib/util.js'
 export default {
   props: {
-    value: {
-      // type: []
-      defautl: null
+    value: { // 若使用字符串必须使用yyyy-mm-dd格式
+      type: [Date, String],
+      // type: Date,
+      defautl: null,
+      validator: function (value) {
+        let isDate = value instanceof Date
+        if (isDate) {
+          return true
+        } else {
+          // let arr = value.split('-')
+          // return arr.length === 3
+          return value === '*'
+        }
+      }
     },
     hasAll: {
       type: Boolean,
@@ -32,26 +44,27 @@ export default {
       default: false
     },
     timeStart: {
-      type: [Date, String],
-      defautl: '', // yyyy-mm-dd
-      valetator (value) {
+      type: [Date, String], // 日期不全时（年月日）默认当年当月当日
+      defautl: new Date(), // yyyy-mm-dd
+      validator (value) {
         return value instanceof Date || typeof value === 'string'
       }
     },
     timeEnd: {
       type: [Date, String],
       default: '',
-      valetator (value) {
+      validator (value) {
         return value instanceof Date || typeof value === 'string'
       }
     },
-    timeSeparate: {
+    timeSeparate: { // 用于从字符串中取时间也用于显示时间。所以必须存在。
       type: String,
-      default: '-'
+      default: '-',
+      require: true
     },
     dateFormat: {
       type: String,
-      default: 'mm-dd' // yy-m-d, m-d, yyyy-mm-dd, mm-dd ...
+      default: 'mm-dd' // yy-m-d, m-d, yyyy-mm-dd, mm-dd ... 都是小写
     },
     timeStep: {
       type: Number, // x 天
@@ -93,20 +106,26 @@ export default {
   },
   data () {
     return {
-      activeValue: null,
+      // dataValue: null,
+      dataValue: this.value,
       dataDataItems: [],
-      dataItems: []
+      dataItems: [],
+      dataTimeStart: '',
+      dataTimeEnd: '',
+      dataTimeStep: 0,
+      dataDateFormat: ''
     }
   },
   watch: {
-    value: function () {
-      this.checkValue()
-      // let obj = Object.create(null)
-      // for ( let i = 0, iLen = this.dataItems.length; i < iLen; i++) {
-      //   if (this.dataItems[i].value === newValue) {
-      //     break
-      //   }
-      // }
+    value: function (newValue) {
+      // this.checkValue()
+      this.dataValue = newValue
+    },
+    timeStart: function () {
+      this.createTimeData()
+    },
+    timeEnd: function () {
+      this.createTimeData()
     }
   },
   computed: {
@@ -131,12 +150,12 @@ export default {
         }
       }
     },
-    compDataItems: {
+    compDateFormat: {
       set (value) {
-        this.dataDataItems = value
+        let str = this.dateFormat.toLowerCase()
       },
       get () {
-        return this.dataDataItems
+        return this.dataDateFormat
       }
     }
   },
@@ -147,149 +166,116 @@ export default {
     createTimeData () {
       // timeStart\timeEnd > timeStep
       if (this.timeStart && this.timeEnd) {
-        let objStart = Object.create(null)
-        let objEnd = Object.create(null)
-        let arrStart = this.timeStart.split('-')
-        let arrEnd = this.timeEnd.split('-')
-        if (arrStart.length) {
-          objStart = {
-            y: Number(arrStart[0]),
-            m: Number(arrStart[1]),
-            d: Number(arrStart[2])
+        let tempDate = new Date()
+        if (this.isDate(this.timeStart)) {
+          this.dataTimeStart = this.timeStart
+        } else {
+          let arr = this.timeStart.split(this.timeSeparate)
+          arr.reverse()
+          this.dataTimeStart = new Date(arr[2] || new Date().getFullYear(), arr[1] - 1 || new Date().getMonth(), arr[0] || new Date().getDate())
+        }
+        if (this.isDate(this.timeEnd)) {
+          this.dataTimeEnd = this.timeEnd
+        } else {
+          if (this.timeEnd === '') {
+            return 
           }
+          let arr = this.timeEnd.split(this.timeSeparate)
+          arr.reverse()
+          this.dataTimeEnd = new Date(arr[2] || new Date().getFullYear(), arr[1] - 1 || new Date().getMonth(), arr[0] || new Date().getDate())
         }
-        if (arrEnd.length) {
-          objEnd = {
-            y: Number(arrEnd[0]),
-            m: Number(arrEnd[1]),
-            d: Number(arrEnd[2])
-          }
-        }
-        let step = (new Date(this.timeEnd) - new Date(this.timeStart)) / (1000 * 60 * 60 * 24)
-        let arrResult = []
-        let dStart = new Date(`${this.timeStart}`)
-        
-        for (let i = 0; i < step; i++) {
-          let d = this.addDay(dStart, i)
-          // console.log(d)
-          arrResult.push({
-            y: d.getFullYear(),
-            m: d.getMonth() + 1,
-            d: d.getDate()
-          })
-        }
-        // console.log(objStart)
-        // console.log(objStart)
-        // console.log(step)
-        // console.log(arrResult)
-        let obj = {}
-        if (this.hasAll) {
-          
-        }
-        obj = {
-          weekText: '今天',
-          yearText: arrResult[0].y,
-          monthText: arrResult[0].m < 10 ? `0${arrResult[0].m}` : arrResult[0].m,
-          dayText: arrResult[0].d < 10 ? `0${arrResult[0].d}` : arrResult[0].d
-          // value: `${arrResult[0].m}-${arrResult[0].d}`
-        }
-        obj.value = `${obj.monthText}-${obj.dayText}`
-        this.dataItems.push(obj)
-        obj = {
-          weekText: '明天',
-          yearText: arrResult[1].y,
-          monthText: arrResult[1].m < 10 ? `0${arrResult[1].m}` : arrResult[1].m,
-          dayText: arrResult[1].d < 10 ? `0${arrResult[1].d}` : arrResult[1].d
-        }
-        obj.value = `${obj.monthText}-${obj.dayText}`
-        this.dataItems.push(obj)
-        for (let i = 2; i < step; i++) {
-          obj = {
-            weekText: this.getChinaWeek(new Date(arrResult[i].y, arrResult[i].m, arrResult[i].d)),
-            yearText: arrResult[i].y,
-            monthText: arrResult[i].m < 10 ? `0${arrResult[i].m}` : arrResult[i].m,
-            dayText: arrResult[i].d < 10 ? `0${arrResult[i].d}` : arrResult[i].d
-          }
-          obj.value = `${obj.monthText}-${obj.dayText}`
-          this.dataItems.push(obj)
+        this.dataTimeStep = (this.dataTimeEnd - this.dataTimeStart) / (1000 * 60 * 60 * 24)
+        for (let i = 0; i < this.dataTimeStep; i++) {
+          this.dataItems.push(
+            this.laterDate(this.dataTimeStart, i),
+          )
         }
       }
+      if (this.timeStart && this.timeStep) {
+
+      }
     },
+    // opDateFormat () {
+    //   let str = this.data
+    // },
     // 检验数据类型
-    checkType (value) {
+    isDate (value) {
       // console.log(typeof value)
-      // value.
-      return typeof value
+      // return typeof value
+      return value instanceof Date
     },
-    addDay (d, n) {
-      // return d.setDate(d.getDate() + n)
+    laterDate (d, n) {
       return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n)
-    },
-    // getChinaWeek
-    getChinaWeek (d) {
-      let str = ''
-      switch (d.getDay()) {
-        case 0:
-          str = '周日'
-          break
-        case 1:
-          str = '周一'
-          break
-        case 2:
-          str = '周二'
-          break
-        case 3:
-          str = '周三'
-          break
-        case 4:
-          str = '周四'
-          break
-        case 5:
-          str = '周五'
-          break
-        case 6:
-        default:
-          str = '周六'
-          break
-      }
-      return str
     },
     checkValue () {
       let obj = {}
       for ( let i = 0, iLen = this.dataItems.length; i < iLen; i++) {
         if (this.dataItems[i].value === this.value) {
-          // this.activeValue = this.dataItems[i].value
           obj = this.dataItems[i]
           break
         }
       }
       if (obj.value) {
-        this.activeValue = obj.value
+        this.dataValue = obj.value
       } else {
         if (this.value === '*') {
-          this.activeValue = '*'
+          this.dataValue = '*'
         } else {
-          this.activeValue = null
+          this.dataValue = null
         }
       }
     },
+    mWeek (data) {
+      return getChinaWeek(data)
+    },
+    mDay (data) {
+      let str = this.dateFormat.toLowerCase()
+      let mLength = str.match(/m/g).length
+      let m = ''
+      if (mLength > 1) {
+        // return `${data.getMonth() < 10 ? }`
+        m = (data.getMonth() < 10 ? `0${data.getMonth() + 1}` : data.getMonth() + 1)
+      } else {
+        m = data.getMonth() + 1
+      }
+      let dLength = str.match(/d/g).length
+      let d = ''
+      if (dLength > 1) {
+        d = data.getDate() < 10 ? `0${data.getDate()}` : `${data.getDate()}`
+      } else {
+        d = data.getDate()
+      }
+      return `${m}-${d}`
+    },
+    mValue (data) {
+      // 若使用日期是否相等判断有会很大误差。所以使用y/m/d是否相等判断
+      let objData = {
+        y: data.getFullYear(),
+        m: data.getMonth(),
+        d: data.getDate()
+      }
+      let objValue = {}
+      if (this.isDate(this.value)) {
+        objValue = {
+          y: this.value.getFullYear(),
+          m: this.value.getMonth(),
+          d: this.value.getDate()
+        }
+        return objData.y === objValue.y && objData.m === objValue.m && objData.d === objValue.d
+      } else {
+        let arr = this.value.split('-')
+        return objData.y === arr[0] * 1 && objData.m === arr[1] * 1 - 1 && objData.d === arr[2] * 1
+      }
+    },
     triggerAll () {
+      this.$emit('input', '*')
       if (this.eventTypeAll) {
-        // this.$emit('input', this.dataAll)
-        // let str = ''
-        // this.dataItems.forEach((item, index, arr) => {
-        //   str += `${item.value}&`
-        // }, this)
-        // str = str.slice(0, str.length - 2)
-        this.$emit('input', '*')
         this.$emit(this.eventTypeAll, this.dataAll)
       }
     },
     triggerItem (data) {
+      this.$emit('input', data)
       if (this.eventTypeItem) {
-        // this.$emit(this.eventTypeItem, this.dataItem)
-        console.log(data)
-        this.$emit('input', data.value)
         this.$emit(this.eventTypeItem, this.dataItem)
       }
     }
@@ -297,8 +283,8 @@ export default {
   created () {},
   mounted () {
     this.createTimeData()
-    this.checkValue()
-    // this.compDataItems = this.dataItems
+    // this.checkValue()
+    // this.opDateFormat()
   }
 }
 </script>
