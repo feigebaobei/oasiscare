@@ -107,7 +107,7 @@ export default {
         return {
           paddingTop: '.72rem',
           paddingBottom: '.64rem'
-        } 
+        }
       }
     }
   },
@@ -185,7 +185,7 @@ export default {
         text-align: center
         border: 0
         border-bottom: 1px solid $greyf
-        padding: .44rem 
+        padding: .44rem
 
         .cbTitle
           color: $grey4
