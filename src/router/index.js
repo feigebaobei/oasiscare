@@ -14,11 +14,13 @@ export default new Router({
     //   name: 'HelloWorld',
     //   component: HelloWorld
     // },
-    // {
-    //   path: '/',
-    //   name: '',
-    //   component: ''
-    // },
+    {
+      path: '/',
+      name: 'index',
+      component: resolve => {
+        require(['@/components/demo/index.vue'], resolve)
+      }
+    },
     {
       path: '/titleArea',
       name: '/titleArea',
