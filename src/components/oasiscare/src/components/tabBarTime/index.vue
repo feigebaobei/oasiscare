@@ -129,15 +129,15 @@ export default {
         return {
         }
       }
-    },
-    compDateFormat: {
-      set (value) {
-        let str = this.dateFormat.toLowerCase()
-      },
-      get () {
-        return this.dataDateFormat
-      }
     }
+    // compDateFormat: {
+    //   set (value) {
+    //     let str = this.dateFormat.toLowerCase()
+    //   },
+    //   get () {
+    //     return this.dataDateFormat
+    //   }
+    // }
   },
   components: {
     itemTime
@@ -150,20 +150,20 @@ export default {
         this.dataTimeStep = (this.dataTimeEnd - this.dataTimeStart) / (1000 * 60 * 60 * 24)
         for (let i = 0; i < this.dataTimeStep; i++) {
           this.dataItems.push(
-            this.laterDate(this.dataTimeStart, i),
+            this.laterDate(this.dataTimeStart, i)
           )
         }
-        return
+        return false
       }
       if (!!this.timeStart && !!this.timeStep) {
         this.dataTimeStart = this.timeStart
         this.dataTimeStep = this.timeStep
         for (let i = 0; i < this.dataTimeStep; i++) {
           this.dataItems.push(
-            this.laterDate(this.dataTimeStart, i),
+            this.laterDate(this.dataTimeStart, i)
           )
         }
-        return
+        return false
       }
       if (!!this.timeEnd && !!this.timeStep) {
         this.dataTimeEnd = this.timeEnd
@@ -172,10 +172,10 @@ export default {
         this.dataTimeStart.setDate(this.dataTimeEnd.getDate() - this.timeStep)
         for (let i = 0; i < this.dataTimeStep; i++) {
           this.dataItems.push(
-            this.laterDate(this.dataTimeStart, i),
+            this.laterDate(this.dataTimeStart, i)
           )
         }
-        return
+        return false
       }
     },
     // 检验数据类型
@@ -309,7 +309,7 @@ export default {
       right: 0
       width: .7rem
       height: 100%
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5)) 
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5))
       pointer-events: none
 
 </style>

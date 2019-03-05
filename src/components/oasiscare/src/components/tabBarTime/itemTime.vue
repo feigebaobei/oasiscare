@@ -57,7 +57,7 @@ export default {
     flex-wrap: wrap
     justify-content: center
     padding: .16rem 0 .12rem 0
-    
+
     .week
       flex-basis: 100%
       flex-grow: 0
