@@ -1,6 +1,9 @@
 <template>
   <div class="titleArea">
-    <h2>titleArea</h2>
+    <div class="import">
+      <h2>引用</h2>
+      <code>import {titleArea, fiveEight} from '@/components/oasiscare'</code>
+    </div>
     <h2>大标题</h2>
     <title-area :title="big.title" :subTitle="big.subTitle" :moreText="big.moreText" :eventTypeMore="'s'" @s="ss"></title-area>
     <title-area :title="big.title" :subTitle="big.subTitle" :eventTypeMore="'s'" @s="ss"></title-area>
@@ -222,8 +225,14 @@ export default {
 
   .titleArea
     // color: red
+    font-size: .36rem
 
     h2
       font-size: .36rem
+
+    .import
+      code
+        background-color: #d8d8d8
+        color: #4a1
 
 </style>
