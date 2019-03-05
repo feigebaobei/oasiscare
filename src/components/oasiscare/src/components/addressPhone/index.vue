@@ -14,6 +14,7 @@
 import { icon } from '../../lib/picMap.js'
 export default {
   props: {
+    // 这里使用addressText是考虑到日后可能会出现addressValue
     addressText: {
       type: String,
       default: ''

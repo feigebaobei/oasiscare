@@ -1,6 +1,9 @@
 <template>
   <div class="orderStatus">
-    orderStatus
+    <div class="import">
+      <h2>引用</h2>
+      <code>import {orderStatus} from '@/components/oasiscare'</code>
+    </div>
     <h2>被驳回</h2>
     <order-status :title="a0.title" :subTitle="a0.subTitle" :imgName="a0.imgName" :active="a0.active"></order-status>
     <h2>审核中</h2>
@@ -27,11 +30,16 @@
     <order-status :title="a11.title" :subTitle="a11.subTitle" :imgUrl="a11.imgUrl" :active="a11.active"></order-status>
     <h2>iconName的优先级大于iconUrl</h2>
     <order-status :title="a11.title" :subTitle="a11.subTitle" :imgName="a11.imgName" :imgUrl="a11.imgUrl" :active="a11.active"></order-status>
+    <h2>属性说明</h2>
+    <explain-table :tds="attrs"></explain-table>
+    <h2>相关issue</h2>
+    <h2>发布日志</h2>
   </div>
 </template>
 
 <script>
 import {orderStatus} from '@/components/oasiscare'
+import explainTable from '../../components/explainTabel.vue'
 import { icon } from '@/lib/picMap.js'
 export default {
   props: {},
@@ -109,13 +117,21 @@ export default {
         imgName: 'reject',
         imgUrl: icon.logo.x1,
         active: true
-      }
+      },
+      attrs: [
+        ['title', 'String', '', '标题', '-',],
+        ['subTitle', 'String', '', '副标题', '-',],
+        ['imgName', 'String', '', '组件内预设的图片的名称。（reject / checking / staleDate / orderCancelGrey / affirmGrey / dealSuccessColor / topayColor / paidColor / transportColor / orderSuccessColor / toServeColor）', '-',],
+        ['imgUrl', 'String', '', '自定义图片的url', '-',],
+        ['active', 'Boolean', 'true', '是否是激活状态', '-',]
+      ]
     }
   },
   computed: {
   },
   components: {
-    orderStatus
+    orderStatus,
+    explainTable
   },
   methods: {},
   created () {},
@@ -124,6 +140,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../assets/style/basic.styl'
 
   .orderStatus
 

@@ -36,7 +36,7 @@
       <h3>该组件库的说明</h3>
       <ol>
         <li>安装方法：<code>npm i oasiscare -S</code></li>
-        <li>长度单位是rem.使用前请设置<code>body</code>元素的font-size.</li>
+        <li>长度单位是rem.使用前请设置<code>html</code>元素的font-size.</li>
         <li>以行内元素使用该组件库的组件时，请使用<code>flex</code>布局，结合<code>flex-grow</code>,<code>flex-shrink</code>使用。</li>
         <li>imgName的优先级高于imgUrl。iconName的优先级高于iconUrl。</li>
         <li>请使用合理的数据类型传入组件。例：不要使用sting类型传入一个date数据（'2019-02-15'）请使用<code>new Date(2019, 1, 15)</code>传入date数据。</li>
