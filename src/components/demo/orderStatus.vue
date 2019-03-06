@@ -119,11 +119,11 @@ export default {
         active: true
       },
       attrs: [
-        ['title', 'String', '', '标题', '-',],
-        ['subTitle', 'String', '', '副标题', '-',],
-        ['imgName', 'String', '', '组件内预设的图片的名称。（reject / checking / staleDate / orderCancelGrey / affirmGrey / dealSuccessColor / topayColor / paidColor / transportColor / orderSuccessColor / toServeColor）', '-',],
-        ['imgUrl', 'String', '', '自定义图片的url', '-',],
-        ['active', 'Boolean', 'true', '是否是激活状态', '-',]
+        ['title', 'String', '', '标题', '-'],
+        ['subTitle', 'String', '', '副标题', '-'],
+        ['imgName', 'String', '', '组件内预设的图片的名称。（reject / checking / staleDate / orderCancelGrey / affirmGrey / dealSuccessColor / topayColor / paidColor / transportColor / orderSuccessColor / toServeColor）', '-'],
+        ['imgUrl', 'String', '', '自定义图片的url', '-'],
+        ['active', 'Boolean', 'true', '是否是激活状态', '-']
       ]
     }
   },
