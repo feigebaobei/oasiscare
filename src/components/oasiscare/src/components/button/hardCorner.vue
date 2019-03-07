@@ -21,7 +21,7 @@ export default {
       default: 'none'
     },
     borderRadius: {
-      type: [String], // 包含单位
+      type: String, // 包含单位
       default: '.04rem' // 设计图的数据只有0.04rem 0.08rem
     },
     maxW: {
