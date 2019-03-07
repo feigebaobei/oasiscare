@@ -1,5 +1,9 @@
 <template>
   <div class="addressItem">
+    <div class="import">
+      <h2>引用</h2>
+      <code>import {addressItem} from '@/components/oasiscare'</code>
+    </div>
     <h2>基本样式</h2>
     <addressItem :title="a0.title" :distance="a0.distance" :subTitle="a0.subTitle"></addressItem>
     <addressItem :title="a1.title" :distance="a1.distance" :subTitle="a1.subTitle" :subTitleHasSeparate="a1.subTitleHasSeparate"></addressItem>
@@ -9,11 +13,16 @@
     <addressItem :title="a0.title" :distance="a0.distance" :subTitle="a0.subTitle" :hasBottom="false"></addressItem>
     <addressItem :title="a0.title" :distance="a0.distance" :subTitle="a0.subTitle" :hasBottom="false"></addressItem>
     <addressItem :title="a0.title" :distance="a0.distance" :subTitle="a0.subTitle" :hasBottom="false"></addressItem>
+    <h2>属性说明</h2>
+    <explain-table :tds="attrs"></explain-table>
+    <h2>相关issue</h2>
+    <h2>发布日志</h2>
   </div>
 </template>
 
 <script>
 import {addressItem} from '@/components/oasiscare'
+import explainTable from '../../components/explainTabel.vue'
 export default {
   props: {},
   data () {
@@ -88,13 +97,21 @@ export default {
           '北京市', '朝阳区', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院', '北辰路8号院'
         ],
         subTitleHasSeparate: false
-      }
+      },
+      attrs: [
+        ['title', 'Array', '[]', '描述标题的对象组成的数组。用于标题。例：<code>[{text: \'\', value: \'\', active: \'\'}]</code>。text: 文本，value： 值，active：是否是激活状态。', '-'],
+        ['distance', '[String, Number]', '', '距离的文本', '-'],
+        ['subTitle', 'Array', '[\'\']', '由基本数据类型组成的数组。用于副标题。例：<code>[\'string\', true, 123]</code>', '-'],
+        ['subTitleHasSeparate', 'Boolean', 'true', '副标题是否有间隔', '-'],
+        ['hasBottom', 'Boolean', 'true', '是否有下边框', '-']
+      ]
     }
   },
   computed: {
   },
   components: {
-    addressItem
+    addressItem,
+    explainTable
   },
   methods: {},
   created () {},
@@ -103,6 +120,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../assets/style/basic.styl'
 
   .addressItem
 
