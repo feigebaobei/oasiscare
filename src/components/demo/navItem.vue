@@ -71,7 +71,7 @@ export default {
         ]
       },
       attrs: [
-        ['imgNames', 'Array', '[\'\', \'\']', '由图片的名称组成的数组。长度必须为2。0:不选中 1：选中。可见<a href="/appendix/imgs">图片集合</a>附录', '-'],
+        ['imgNames', 'Array', '[\'\', \'\']', '由图片的名称组成的数组。长度必须为2。0:不选中 1：选中。可见<a href="#/appendix/imgs">图片集合</a>附录。优先级高于imgUrls.', '-'],
         ['imgUrls', 'Array', '[\'\', \'\']', '由自定义图片组成的数组。长度必须为2。0:不选中 1：选中。', '-'],
         ['title', 'String', '', '标题', '-'],
         ['area', 'String', 'big', '组件的大小。只能输入big或small.', '-'],

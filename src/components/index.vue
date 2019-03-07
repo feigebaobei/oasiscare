@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <h3>组件</h3>
     <nav class="nav">
       <router-link to="/titleArea">titleArea</router-link>
       <router-link to="/addressPhone">addressPhone</router-link>
@@ -31,6 +32,10 @@
       <router-link to="/evaluationCard">evaluationCard</router-link>
       <router-link to="/confirm">confirm</router-link>
       <router-link to="/tabBarTime">tabBarTime</router-link>
+    </nav>
+    <h3>附录</h3>
+    <nav class="nav">
+      <router-link to="/appendix">appendix</router-link>
     </nav>
     <div class="explain">
       <h3>该组件库的说明</h3>
@@ -64,7 +69,7 @@ export default {
 
 <style lang="stylus" scoped>
 
-.nav
+.nav, h3
   font-size: .28rem
 
   a

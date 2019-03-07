@@ -5,6 +5,8 @@ import Router from 'vue-router'
 import titleArea from '@/components/demo/titleArea.vue'
 import addressPhone from '@/components/demo/addressPhone.vue'
 
+import {appendix} from './appendix.js'
+
 Vue.use(Router)
 
 export default new Router({
@@ -18,7 +20,7 @@ export default new Router({
       path: '/',
       name: 'index',
       component: resolve => {
-        require(['@/components/demo/index.vue'], resolve)
+        require(['@/components/index.vue'], resolve)
       }
     },
     {
@@ -240,6 +242,7 @@ export default new Router({
       component: resolve => {
         require(['@/components/demo/tabBarTime.vue'], resolve)
       }
-    }
+    },
+    ...appendix
   ]
 })
