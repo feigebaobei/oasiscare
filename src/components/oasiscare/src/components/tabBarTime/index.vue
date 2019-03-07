@@ -31,7 +31,7 @@ export default {
         } else {
           // let arr = value.split('-')
           // return arr.length === 3
-          return value === '*'
+          return value === '*' || value === ''
         }
       }
     },
@@ -270,8 +270,8 @@ export default {
     background-color: $orange
 
   .box
-    overflow-x: scroll
-    overflow-y: hidden
+    // overflow-x: scroll
+    // overflow-y: hidden
     // max-width: calc( 100% - 1.36rem )
     flex-basis: 100%
     flex-grow: 0
@@ -295,13 +295,16 @@ export default {
       flex-grow: 0
       flex-shrink: 0
       display: flex
-      // flex-wrap: wrap
+      user-select: none
 
       .item
         flex-basis: 1.36rem
         flex-grow: 0
         flex-shrink: 0
         display: flex
+
+    // .scrollBox::-webkit-scrollbar
+    //   display: none
 
     .shelterRight
       position: absolute
