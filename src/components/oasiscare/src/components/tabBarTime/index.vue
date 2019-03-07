@@ -289,7 +289,7 @@ export default {
       pointer-events: none
 
     .scrollBox
-      overflow-x: scroll
+      overflow-x: auto
       overflow-y: hidden
       flex-basis: 100%
       flex-grow: 0
