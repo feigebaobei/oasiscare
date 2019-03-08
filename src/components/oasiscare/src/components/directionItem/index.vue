@@ -39,8 +39,8 @@ export default {
       default: ''
     },
     eventType: {
-      type: Boolean,
-      default: false
+      type: String,
+      default: ''
     },
     data: {
       default () {
@@ -48,8 +48,8 @@ export default {
       }
     },
     eventTypeDI: {
-      type: Boolean,
-      default: false
+      type: String,
+      default: ''
     },
     dataDI: {
       default () {

@@ -1,5 +1,9 @@
 <template>
   <div class="hardCorner">
+    <div class="import">
+      <h2>引用</h2>
+      <code>import {hardCorner} from '@/components/oasiscare'</code>
+    </div>
     <h2>基本样式</h2>
     <hard-corner :text="a0.text" :color="a0.color" :border="a0.border" :borderRadius="a0.borderRadius" :bg="a0.bg" :area="a0.area"></hard-corner>
     <hard-corner :text="'小标准'" :color="a0.color" :border="a0.border" :borderRadius="a0.borderRadius" :bg="a0.bg" :area="a0.area"></hard-corner>
@@ -18,11 +22,16 @@
     <h2>改变border-radius</h2>
     <hard-corner :text="a0.text" :color="a0.color" :bg="a0.bg" :borderRadius="a0.borderRadius" :area="a0.area"></hard-corner>
     <hard-corner :text="a1.text" :color="a1.color" :bg="a1.bg" :borderRadius="a1.borderRadius" :area="a1.area"></hard-corner>
+    <h2>属性说明</h2>
+    <explain-table :tds="attrs"></explain-table>
+    <h2>相关issue</h2>
+    <h2>发布日志</h2>
   </div>
 </template>
 
 <script>
 import {hardCorner} from '@/components/oasiscare'
+import explainTable from '../../components/explainTabel.vue'
 export default {
   props: {},
   data () {
@@ -66,13 +75,26 @@ export default {
         area: 'small',
         maxW: '2rem',
         minW: '1rem'
-      }
+      },
+      attrs: [
+        ['text', 'String', '', '文本', '-'],
+        ['color', 'String', '', '文本的颜色', '-'],
+        ['border', 'String', 'none', '边框', '-'],
+        ['borderRadius', 'String', '.04rem', '边框圆角', '-'],
+        ['maxW', 'String', '', '最大宽度', '-'],
+        ['minW', 'String', '', '最小宽度', '-'],
+        ['bg', 'String', '', '背景', '-'],
+        ['area', 'String', 'big', '大小。只选项有：\'big\': 36, \'middle\': 32, \'small\': 28', '-'],
+        ['eventType', 'String', '', '当点击时触发的事件', '-'],
+        ['data', '-', '{}', '当点击时触发的事件对应方法的参数', '-']
+      ]
     }
   },
   computed: {
   },
   components: {
-    hardCorner
+    hardCorner,
+    explainTable
   },
   methods: {},
   created () {},
@@ -81,6 +103,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../assets/style/basic.styl'
 
 .hardCorner
 

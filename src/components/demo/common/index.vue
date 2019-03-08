@@ -11,7 +11,7 @@
     <h2>label</h2>
     <div class="import">
       <h2>引用</h2>
-      <code>import {imgText} from '@/components/oasiscare'</code>
+      <code>import {label} from '@/components/oasiscare'</code>
     </div>
     <h2>属性说明</h2>
     <explain-table :tds="attrs0"></explain-table>
@@ -32,7 +32,7 @@
     <h2>infoBlock</h2>
     <div class="import">
       <h2>引用</h2>
-      <code>import {imgText} from '@/components/oasiscare'</code>
+      <code>import {infoBlock} from '@/components/oasiscare'</code>
     </div>
     <info-block :imgUrl="dataImgText1.imgUrl" :value="dataImgText1.text" :title="dataImgText1.text"></info-block>
     <h2>几个在一起</h2>
@@ -111,6 +111,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../../assets/style/basic.styl'
 
   .common
     font-size: .36rem

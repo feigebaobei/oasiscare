@@ -3,7 +3,7 @@
     <h2>grade</h2>
     <div class="import">
       <h2>引用</h2>
-      <code>import {titleArea, fiveEight} from '@/components/oasiscare'</code>
+      <code>import {grade} from '@/components/oasiscare'</code>
     </div>
     <h2>基本样式</h2>
     <grade :value="a0.value"></grade>
