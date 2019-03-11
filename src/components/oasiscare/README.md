@@ -10,4 +10,6 @@ css预处理工具
         formItem 添加验证功能
         tabBarTime 兼容pc，开发缓动效果
         softCorner 感觉inline-flex时会出现样式问题
+        参数名称统一 grade/gradeValue 数据类型统一
+
 
