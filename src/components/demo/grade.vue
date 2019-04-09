@@ -16,6 +16,8 @@
     <h2>大于5</h2>
     <grade :value="a3.value"></grade>
     <h2>和其它块级元素一起使用</h2>
+    <h2>可点击</h2>
+    <grade v-model="a3.value"></grade>
     <div class="box">
       <grade :value="a2.value"></grade>
       <p>first</p>

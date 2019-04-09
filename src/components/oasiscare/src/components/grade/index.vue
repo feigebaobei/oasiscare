@@ -1,11 +1,8 @@
 <!-- 日后会增加点星星时设置数据的功能 -->
 <template>
   <div class="grade">
-    <!-- <img :src="compImgUrl" alt="" class="starIcon"> -->
-    <!-- <img :src="compImgUrl" alt="" class="starIcon"> -->
-    <img :src="activeIcon" alt="" class="starIcon activeImg" v-for="(item, activeIndex) in activeNumber" :key="activeIndex">
-    <img :src="unActiveIcon" alt="" class="starIcon unActiveImg" v-for="(item, unActiveIndex) in unActiveNumber" :key="unActiveIndex + total">
-    <!-- 因为activeIndex 和 unActiveIndex 的值都是从0开始取的。所以会有重复的情况发生。所以故意加一个数（这里使用了total），使这2个值不可能出现相等。 -->
+    <span class="empty" @click="setValue(0)"></span>
+    <img :src="mImgUrl(index)" alt="" class="starIcon" v-for="(index) in total" :key="index" @click="setValue(index)">
     <span class="gradeValue" v-html="compValue"></span>
   </div>
 </template>
@@ -74,6 +71,17 @@ export default {
       this.dataValue = box
       this.activeNumber = Math.floor(box)
       this.unActiveNumber = this.total - this.activeNumber
+    },
+    mImgUrl (index) {
+      if (this.activeNumber >= index) {
+        return this.activeIcon
+      } else {
+        return this.unActiveIcon
+      }
+    },
+    setValue (index) {
+      console.log(index)
+      this.$emit('input', index)
     }
   },
   created () {},
@@ -90,14 +98,14 @@ export default {
   display: flex
   align-items: center
 
+  .empty
+    width: .24rem
+    height: .24rem
+
   .starIcon
     width: .24rem
     height: .24rem
     margin: 0 $separate08 0 0
-
-  // .activeImg
-
-  // .unActiveImg
 
   .gradeValue
     color: $grey6
