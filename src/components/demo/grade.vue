@@ -17,7 +17,7 @@
     <grade :value="a3.value"></grade>
     <h2>和其它块级元素一起使用</h2>
     <h2>可点击</h2>
-    <grade v-model="a3.value"></grade>
+    <grade v-model="a3.value" :eventAble="true"></grade>
     <div class="box">
       <grade :value="a2.value"></grade>
       <p>first</p>
@@ -70,7 +70,9 @@ export default {
         percentValue: 70
       },
       attrs0: [
-        ['value', 'Number', '0', '表示级别的数字。可以输入任意数字，但只显示[0, 5]内容的数字', '-']
+        ['value', 'Number', '0', '表示级别的数字。可以输入任意数字，但只显示[0, 5]内容的数字', '-'],
+        ['v-model', 'Number', '0', '表示级别的数字。可以输入任意数字，但只显示[0, 5]内容的数字', '-'],
+        ['eventAble', 'Boolean', 'false', '是否可以点击设置值', '0.0.36']
       ],
       attrs1: [
         ['imgUrls', 'Array', '[\'\', \'\']', '由背景图片和前景图片组件的数组。数组长度必须为2。0：背景图片，1：前景图片。', '-'],

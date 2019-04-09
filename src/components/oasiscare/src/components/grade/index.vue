@@ -1,4 +1,3 @@
-<!-- 日后会增加点星星时设置数据的功能 -->
 <template>
   <div class="grade">
     <span class="empty" @click="setValue(0)"></span>
@@ -14,6 +13,10 @@ export default {
     value: {
       type: Number,
       default: 0
+    },
+    eventAble: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -80,8 +83,9 @@ export default {
       }
     },
     setValue (index) {
-      console.log(index)
-      this.$emit('input', index)
+      if (this.eventAble) {
+        this.$emit('input', index)
+      }
     }
   },
   created () {},
