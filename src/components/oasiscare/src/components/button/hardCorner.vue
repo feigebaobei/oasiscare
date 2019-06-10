@@ -125,6 +125,7 @@ export default {
   display: inline-flex
   box-sizing: border-box
   font-weight: $fontWeightBold
+  white-space: nowrap
 
 .big
 
