@@ -14,11 +14,13 @@
         <span class="address" v-html="address"></span>
         <span class="distance" v-html="distance"></span>
       </div>
-      <div class="tagBox">
+      <div class="hctagBox">
         <hard-corner :class="[{tagItem: true, tagItemNoLast: index !== tags.length - 1}]" v-for="(item, index) in tags" :key="index" :text="item" :color="tag.color" :border="tag.border" :borderRadius="tag.borderRadius"></hard-corner>
       </div>
       <grade :value="grade"></grade>
     </div>
+    <div class="bottomTrue" v-if="bottom"></div>
+    <div class="bottomFalse" v-else></div>
   </div>
 </template>
 
@@ -64,6 +66,10 @@ export default {
     },
     grade: {
       type: Number
+    },
+    bottom: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -71,15 +77,15 @@ export default {
       authenticationIcon: icon.medal.x2,
       health: {
         text: '医保',
-        color: '#fff',
+        color: '#4592FF',
         borderRadius: '.08rem',
-        bg: '#8bbffc'
+        bg: 'rgba(69, 146, 255, .123)'
       },
       business: {
         text: '商保',
-        color: '#fff',
+        color: '#32BF8B',
         borderRadius: '.08rem',
-        bg: '#87cd72'
+        bg: 'rgba(50, 191, 139, .12)'
       },
       tag: {
         color: '#9b9b9b',
@@ -112,13 +118,13 @@ export default {
 @import '../../assets/style/main.styl'
 
 .hospitalCard
-  padding: $paddingTop $paddingRight .32rem $paddingLeft
+  padding: $paddingTop $paddingRight 0 $paddingLeft
   background-color: $white
   display: flex
   flex-wrap: wrap
 
   .hcImgBox
-    border-radius: .16rem
+    border-radius: .08rem
     overflow: hidden
     margin: 0 $separate24 0 0
     flex-grow: 0
@@ -183,7 +189,7 @@ export default {
         line-height: .34rem
         margin: 0 0 0 $separate24
 
-    .tagBox
+    .hctagBox
       flex-basis: 100%
       flex-grow: 0
       flex-shrink: 0
@@ -194,5 +200,16 @@ export default {
 
       .tagItemNoLast
         margin-right: .08rem
+  
+  .bottomTrue
+    flex-basis: 100%
+    height: .32rem
+    border-bottom: .01rem solid #f0f0f0
+
+    
+  .bottomFalse
+    flex-basis: 100%
+    height: .32rem
+    border-bottom: none
 
 </style>
