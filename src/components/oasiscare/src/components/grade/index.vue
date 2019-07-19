@@ -51,7 +51,8 @@ export default {
         }
       },
       get () {
-        return this.dataValue
+        // return this.dataValue
+        return this.dataValue.toFixed(1)
       }
     }
   },

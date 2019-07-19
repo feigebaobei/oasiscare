@@ -183,10 +183,14 @@ export default {
       .address
         font-size: .28rem
         line-height: .4rem
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        overflow: hidden
 
       .distance
         font-size: .28rem
-        line-height: .34rem
+        /*line-height: .34rem*/
         margin: 0 0 0 $separate24
 
     .hctagBox
