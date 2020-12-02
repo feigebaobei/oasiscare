@@ -12,6 +12,11 @@ css预处理工具
         softCorner 感觉inline-flex时会出现样式问题
         参数名称统一 grade/gradeValue 数据类型统一
 
+# 设计理念
+
+1. 让组件库足够独立、足够内聚。尽可能减少依赖。不使用现有的组件库二次开发。内置组件库需要的图片。
+2. 尽量保证组件正常运行。尽可能多的考虑程序员输入的数据。当数据不符合要求时，可以转换为符合要求的数据再渲染组件。当数据出错时，明确报出错误源头。
+
 # 使用组件库。
 
 使用该组件库前需要安装`stylus`,`stylus-loader`。设置根元素的font-size.
@@ -92,7 +97,7 @@ css预处理工具
 
 新建组件的vue文件放在src/components里用组件名命名目录名。该目录内以index.vue的名称定义组件。在src/index.js里引入并输出。
 组件使用图片里在src/assets/imgs里添加相应图片。在src/lib/picMap.js里引入并输出。
-src/lib/util.js里定义常用的函数。如操作星期、操作cookie等。方便在多个*.vue文件里使用。
+src/lib/util.js里定义常用的函数。如操作星期、操作cookie等。方便在多个`*.vue`文件里使用。
 
 ## 新建组件的vue文件要求
 
